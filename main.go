@@ -89,8 +89,10 @@ func main() {
 
 	GH_REPO := os.Getenv("GH_REPO")
 	GH_TOKEN := os.Getenv("GH_TOKEN")
+	fmt.Printf("t6: %T\n", GH_REPO)
+	fmt.Printf("t6: %T\n", GH_TOKEN)
 	if GH_REPO == "" || GH_TOKEN == "" {
-		panic(`Provide ${GH_REPO} and ${GH_TOKEN} environment variables!`)
+		panic("Provide GH_REPO and GH_TOKEN environment variables!)
 	}
 	REPO_URL := "https://api.github.com/repos/" + GH_REPO
 	var (
