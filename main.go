@@ -152,8 +152,7 @@ func main() {
 
 	// Ingored hostnames
 
-	//response = getOrDie("https://bitbucket.org/ValdikSS/antizapret/raw/master/ignorehosts.txt")
-	response = getOrDie("https://pastebin.com/raw/HExyNJJe")
+	response = getOrDie("https://bitbucket.org/ValdikSS/antizapret/raw/master/ignorehosts.txt")
 	fmt.Println("Downloaded ingoredhosts.")
 
 	ignoredHostnames := make(map[string]bool)
@@ -255,8 +254,7 @@ func main() {
 		"e-hentai.org":   true,
 		"deviantart.net": true, // https://groups.google.com/forum/#!topic/anticensority/uXFsOS1lQ2
 		"kaztorka.org":   true, // https://groups.google.com/forum/#!msg/anticensority/vweNToREQ1o/3EbhCDjfAgAJ
-		// TEST
-		"rt.pornhub.com": false,
+		
 	}
 	for hostname, ifBlocked := range customHostnames {
 		HOSTNAMES[hostname] = ifBlocked
