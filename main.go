@@ -247,13 +247,15 @@ func main() {
 		"free-rutor.org":  true,
 		// Rutracker complaints:
 		"static.t-ru.org": true,
-		"rutrk.org":       true,
+		
 
 		"nnm-club.ws":    true,
 		"lostfilm.tv":    true,
 		"e-hentai.org":   true,
 		"deviantart.net": true, // https://groups.google.com/forum/#!topic/anticensority/uXFsOS1lQ2
 		"kaztorka.org":   true, // https://groups.google.com/forum/#!msg/anticensority/vweNToREQ1o/3EbhCDjfAgAJ
+		// TEST
+		"rt.pornhub.com": false,
 	}
 	for hostname, ifBlocked := range customHostnames {
 		HOSTNAMES[hostname] = ifBlocked
