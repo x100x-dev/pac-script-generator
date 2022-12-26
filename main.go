@@ -480,7 +480,7 @@ func main() {
 		fmt.Println(method + "ed.")
 		return response
 	}
-	response = doOrDie("POST", REPO_URL+"/tree/master", marshalled)
+	response = doOrDie("POST", REPO_URL+"/git/trees", marshalled)
 	text, err = ioutil.ReadAll(response.Body)
 	if err != nil {
 		panic(err)
