@@ -10,7 +10,7 @@ jobs:
   generate:
     name: Generate and publish
     runs-on: ubuntu-latest
-    
+    environment: pac-generator
     steps:
       - name: Clone
         uses: actions/checkout@v3
