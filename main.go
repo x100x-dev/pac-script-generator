@@ -152,7 +152,8 @@ func main() {
 
 	// Ingored hostnames
 
-	response = getOrDie("https://bitbucket.org/ValdikSS/antizapret/raw/master/ignorehosts.txt")
+	//response = getOrDie("https://bitbucket.org/ValdikSS/antizapret/raw/master/ignorehosts.txt")
+	response = getOrDie("https://pastebin.com/raw/HExyNJJe")
 	fmt.Println("Downloaded ingoredhosts.")
 
 	ignoredHostnames := make(map[string]bool)
