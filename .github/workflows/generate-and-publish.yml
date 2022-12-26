@@ -23,6 +23,6 @@ jobs:
       - name: Generate and publish
         run: go run main.go
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
-          GH_REPO: x100x-dev/generated-pac-scripts
+          GH_TOKEN: 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
+          GH_REPO: x100x-dev/pac-generator
 
