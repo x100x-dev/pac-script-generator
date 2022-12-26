@@ -22,6 +22,6 @@ jobs:
       - name: Generate and publish
         run: go run main.go
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GH_TOKEN: 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
           GH_REPO: anticensority/generated-pac-scripts
 
