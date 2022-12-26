@@ -3,7 +3,7 @@ name: Generate and publish
 on:
   workflow_dispatch:
   schedule:
-    - cron:  '0 * * * *'
+    - cron:  '*/20 * * * *'
   
 
 jobs:
