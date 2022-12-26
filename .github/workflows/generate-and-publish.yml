@@ -10,7 +10,7 @@ jobs:
   generate:
     name: Generate and publish
     runs-on: ubuntu-latest
-    environment: Pac-Generator
+    
     steps:
       - name: Clone
         uses: actions/checkout@v3
@@ -23,6 +23,6 @@ jobs:
       - name: Generate and publish
         run: go run main.go
         env:
-          GH_TOKEN: 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
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
           GH_REPO: x100x-dev/pac-generator
 
