@@ -241,7 +241,7 @@ func main() {
 		"new-team.org":    true,
 		"fast-torrent.ru": true,
 		"pornreactor.cc":  true,
-		"joyreactor.cc":   true,
+		//"joyreactor.cc":   true,
 		"nnm-club.name":   true,
 		"rutor.info":      true,
 		"free-rutor.org":  true,
