@@ -155,7 +155,16 @@ func main() {
 	response = getOrDie("https://bitbucket.org/ValdikSS/antizapret/raw/master/ignorehosts.txt")
 	fmt.Println("Downloaded ingoredhosts.")
 
-	ignoredHostnames := make(map[string]bool)
+	ignoredHostnames := map[string]bool{
+  		"ynet.co.il": true,
+		"rutrk.org": true,
+		"pornhub.com": true,
+		"rt.pornhub.com": true,
+		"ru.pornhub.com": true,
+		"ytimg.com": true,
+		"tiktok.com": true,
+		"joyreactor.cc": true,
+	}
 	scanner := bufio.NewScanner(response.Body)
 	for scanner.Scan() {
 		ignoredHostnames[scanner.Text()] = true
