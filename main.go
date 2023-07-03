@@ -157,11 +157,14 @@ func main() {
 
 	ignoredHostnames := map[string]bool{
   		"ynet.co.il": true,
+		"www.ynet.co.il": true,
 		"rutrk.org": true,
 		"pornhub.com": true,
+		"www.pornhub.com": true,
 		"rt.pornhub.com": true,
 		"ru.pornhub.com": true,
 		"ytimg.com": true,
+		"i.ytimg.com": true,
 		"tiktok.com": true,
 		"joyreactor.cc": true,
 	}
