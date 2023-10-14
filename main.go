@@ -167,6 +167,8 @@ func main() {
 		"i.ytimg.com": true,
 		"tiktok.com": true,
 		"joyreactor.cc": true,
+		"ggpht.com": true,
+		"akamaihd.net": true,
 	}
 	scanner := bufio.NewScanner(response.Body)
 	for scanner.Scan() {
