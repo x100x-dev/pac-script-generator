@@ -196,7 +196,8 @@ func main() {
 
 	// ТСПУ (TSPU), list of shaped hostnames
 	
-	response = getOrDie("https://registry.censortracker.org/registry-api/domains/?countryCode=ru")
+	//response = getOrDie("https://registry.censortracker.org/registry-api/domains/?countryCode=ru")
+	response = getOrDie("https://registry.censortracker.org/api/v3/dpi/")
 	text, err = ioutil.ReadAll(response.Body)
 	if err != nil {
 		panic(err)
@@ -268,6 +269,7 @@ func main() {
 		"e-hentai.org":   true,
 		"deviantart.net": true, // https://groups.google.com/forum/#!topic/anticensority/uXFsOS1lQ2
 		"kaztorka.org":   true, // https://groups.google.com/forum/#!msg/anticensority/vweNToREQ1o/3EbhCDjfAgAJ
+		"familysearch.org": true,
 		
 	}
 	for hostname, ifBlocked := range customHostnames {
