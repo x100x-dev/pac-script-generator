@@ -197,7 +197,8 @@ func main() {
 	// ТСПУ (TSPU), list of shaped hostnames
 	
 	//response = getOrDie("https://registry.censortracker.org/registry-api/domains/?countryCode=ru")
-	response = getOrDie("https://registry.censortracker.org/api/v3/dpi/")
+	//response = getOrDie("https://registry.censortracker.org/api/v3/dpi/")
+	response = getOrDie("https://raw.githubusercontent.com/x100x-dev/TSPU/main/domains.json")
 	text, err = ioutil.ReadAll(response.Body)
 	if err != nil {
 		panic(err)
