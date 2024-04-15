@@ -271,6 +271,7 @@ func main() {
 		"deviantart.net": true, // https://groups.google.com/forum/#!topic/anticensority/uXFsOS1lQ2
 		"kaztorka.org":   true, // https://groups.google.com/forum/#!msg/anticensority/vweNToREQ1o/3EbhCDjfAgAJ
 		"familysearch.org": true,
+		"fastproxy.online": true,
 		
 	}
 	for hostname, ifBlocked := range customHostnames {
