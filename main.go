@@ -272,6 +272,7 @@ func main() {
 		"kaztorka.org":   true, // https://groups.google.com/forum/#!msg/anticensority/vweNToREQ1o/3EbhCDjfAgAJ
 		"familysearch.org": true,
 		"fastproxy.online": true,
+		"dlinkddns.com": true, // 451 - blocked in RU
 		
 	}
 	for hostname, ifBlocked := range customHostnames {
