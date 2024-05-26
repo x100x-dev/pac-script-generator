@@ -273,6 +273,7 @@ func main() {
 		"familysearch.org": true,
 		"fastproxy.online": true,
 		"dlinkddns.com": true, // 451 - blocked in RU
+		"padlet.com": true, // ТСПУ
 		
 	}
 	for hostname, ifBlocked := range customHostnames {
