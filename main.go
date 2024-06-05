@@ -268,13 +268,14 @@ func main() {
 		"nnm-club.ws":    true,
 		"lostfilm.tv":    true,
 		"e-hentai.org":   true,
-		"deviantart.net": true, // https://groups.google.com/forum/#!topic/anticensority/uXFsOS1lQ2
-		"kaztorka.org":   true, // https://groups.google.com/forum/#!msg/anticensority/vweNToREQ1o/3EbhCDjfAgAJ
+		"deviantart.net": true, 	// https://groups.google.com/forum/#!topic/anticensority/uXFsOS1lQ2
+		"kaztorka.org":   true, 	// https://groups.google.com/forum/#!msg/anticensority/vweNToREQ1o/3EbhCDjfAgAJ
 		"familysearch.org": true,
 		"fastproxy.online": true,
-		"dlinkddns.com": true, // 451 - blocked in RU
-		"padlet.com": true, // ТСПУ
-		"ionos.com": true, // ТСПУ
+		"dlinkddns.com": true, 		// 451 - blocked in RU
+		"padlet.com": true, 		// ТСПУ
+		"ionos.com": true, 		// ТСПУ
+		"itch.io",: true, 		// ТСПУ
 		
 	}
 	for hostname, ifBlocked := range customHostnames {
