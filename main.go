@@ -275,7 +275,7 @@ func main() {
 		"dlinkddns.com": true, 		// 451 - blocked in RU
 		"padlet.com": true, 		// ТСПУ
 		"ionos.com": true, 		// ТСПУ
-		"itch.io",: true, 		// ТСПУ
+		"itch.io": true, 		// ТСПУ
 		
 	}
 	for hostname, ifBlocked := range customHostnames {
