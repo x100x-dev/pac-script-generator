@@ -275,7 +275,6 @@ func main() {
 		"dlinkddns.com": true, 		// 451 - blocked in RU
 		"padlet.com": true, 		// ТСПУ
 		"ionos.com": true, 		// ТСПУ
-		"itch.io": true, 		// ТСПУ
 		"alphacoders.com": true,	// 451 - blocked in RU
 		"claude.ai": true,		// 451 - blocked in RU
 		
