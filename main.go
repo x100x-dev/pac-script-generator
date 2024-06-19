@@ -277,6 +277,7 @@ func main() {
 		"ionos.com": true, 		// ТСПУ
 		"alphacoders.com": true,	// 451 - blocked in RU
 		"claude.ai": true,		// 451 - blocked in RU
+		"reka.ai": true,		// 451 - blocked in RU
 		
 	}
 	for hostname, ifBlocked := range customHostnames {
