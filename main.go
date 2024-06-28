@@ -279,6 +279,7 @@ func main() {
 		"claude.ai": true,		// 451 - blocked in RU
 		"reka.ai": true,		// 451 - blocked in RU
 		"timehd.club": true, 		// ТСПУ
+		"rebrand.ly": true, 		// ТСПУ
 		
 	}
 	for hostname, ifBlocked := range customHostnames {
