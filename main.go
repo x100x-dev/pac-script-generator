@@ -280,6 +280,7 @@ func main() {
 		"reka.ai": true,		// 451 - blocked in RU
 		"timehd.club": true, 		// ТСПУ
 		"rebrand.ly": true, 		// ТСПУ
+		"skycdp.com": true,		// 403 - blocked in RU
 		
 	}
 	for hostname, ifBlocked := range customHostnames {
