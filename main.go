@@ -281,7 +281,6 @@ func main() {
 		"timehd.club": true, 		// ТСПУ
 		"rebrand.ly": true, 		// ТСПУ
 		"skycdp.com": true,		// 403 - blocked in RU
-		"ficbook.net": true,		// ТСПУ
 		
 	}
 	for hostname, ifBlocked := range customHostnames {
