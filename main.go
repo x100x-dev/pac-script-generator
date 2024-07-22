@@ -169,6 +169,8 @@ func main() {
 		"joyreactor.cc": true,
 		"ggpht.com": true,
 		"akamaihd.net": true,
+		"youtube.com": true,
+		"googlevideo.com": true,
 	}
 	scanner := bufio.NewScanner(response.Body)
 	for scanner.Scan() {
@@ -281,6 +283,7 @@ func main() {
 		"timehd.club": true, 		// ТСПУ
 		"rebrand.ly": true, 		// ТСПУ
 		"skycdp.com": true,		// 403 - blocked in RU
+		"wildstat.com": true,		// blocked in RU
 		
 	}
 	for hostname, ifBlocked := range customHostnames {
