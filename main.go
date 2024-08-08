@@ -35,17 +35,17 @@ type blockProvider struct {
 }
 
 var blockProviders = []blockProvider{
-	//blockProvider{
-	//	urls: []string{
-	//		"https://svn.code.sf.net/p/zapret-info/code/dump.csv",
-	//	},
-	//	rssUrl: "https://sourceforge.net/p/zapret-info/code/feed",
-	//},
 	blockProvider{
 		urls: []string{
 			"https://raw.githubusercontent.com/zapret-info/z-i/master/dump.csv",
 		},
 		rssUrl: "https://github.com/zapret-info/z-i/commits/master.atom",
+	},	
+	blockProvider{
+		urls: []string{
+			"https://svn.code.sf.net/p/zapret-info/code/dump.csv",
+		},
+		rssUrl: "https://sourceforge.net/p/zapret-info/code/feed",
 	},
 	//blockProvider {
 	//	urls: []string{
@@ -239,9 +239,11 @@ func main() {
 
 	reader := csv.NewReader(transform.NewReader(csvIn, charmap.Windows1251.NewDecoder()))
 	reader.Comma = ';'
-	reader.FieldsPerRecord = 6
+	reader.FieldsPerRecord = -1 // Don't check number of fields.
 	idna := idna.New()
 	customHostnames := map[string]bool{
+		// TSPU-extra
+		"ua": true, // Whole *.ua.
 		// Extremism:
 		"pravdabeslana.ru": true,
 		// WordPress:
@@ -304,7 +306,7 @@ func main() {
 			}
 			panic(err)
 		}
-		ifHasHostname := false
+		ifHasHostname := len(record) > 1
 		hostnamesSlice := strings.Split(record[1], "|")
 		for _, hostname := range hostnamesSlice {
 			hostname = strings.Trim(hostname, " \t")
