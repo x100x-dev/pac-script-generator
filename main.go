@@ -284,6 +284,7 @@ func main() {
 		"rebrand.ly": true, 		// ТСПУ
 		"skycdp.com": true,		// 403 - blocked in RU
 		"wildstat.com": true,		// blocked in RU
+		"tria.ge": true, 		// blocked in RU
 		
 	}
 	for hostname, ifBlocked := range customHostnames {
