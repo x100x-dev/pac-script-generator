@@ -287,6 +287,8 @@ func main() {
 		"skycdp.com": true,		// 403 - blocked in RU
 		"wildstat.com": true,		// blocked in RU
 		"tria.ge": true, 		// blocked in RU
+		"rulate.ru": true,		// content blocked in RU
+		"fanficus-server-mirror-879c30cd977f.herokuapp.com": true,		// domain checks GEO for site fanficus.com
 		
 	}
 	for hostname, ifBlocked := range customHostnames {
