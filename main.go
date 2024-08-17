@@ -291,6 +291,7 @@ func main() {
 		"fanficus-server-mirror-879c30cd977f.herokuapp.com": true,		// domain checks GEO for site fanficus.com
 		"apollo.farm": true,		// blocked in RU
 		"station.money": true,		// blocked in RU
+		"skip.build": true,		// content blocked in RU
 		
 	}
 	for hostname, ifBlocked := range customHostnames {
