@@ -170,7 +170,9 @@ func main() {
 		"ggpht.com": true,
 		"akamaihd.net": true,
 		"youtube.com": true,
+		"www.youtube.com": true,
 		"googlevideo.com": true,
+		".googlevideo.com": true,
 	}
 	scanner := bufio.NewScanner(response.Body)
 	for scanner.Scan() {
@@ -292,6 +294,8 @@ func main() {
 		"apollo.farm": true,		// blocked in RU
 		"station.money": true,		// blocked in RU
 		"skip.build": true,		// content blocked in RU
+		"iar.com": true,		// content blocked in RU
+		"st.com": true,			// content blocked in RU
 		
 	}
 	for hostname, ifBlocked := range customHostnames {
