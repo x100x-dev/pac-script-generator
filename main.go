@@ -296,6 +296,7 @@ func main() {
 		"skip.build": true,		// content blocked in RU
 		"iar.com": true,		// content blocked in RU
 		"st.com": true,			// content blocked in RU
+		"howlongtobeat.com": true,	// blocked in RU
 		
 	}
 	for hostname, ifBlocked := range customHostnames {
