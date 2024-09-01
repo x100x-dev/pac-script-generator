@@ -297,6 +297,7 @@ func main() {
 		"iar.com": true,		// content blocked in RU
 		"st.com": true,			// content blocked in RU
 		"howlongtobeat.com": true,	// blocked in RU
+		"lingq.com": true, 		// ТСПУ
 		
 	}
 	for hostname, ifBlocked := range customHostnames {
