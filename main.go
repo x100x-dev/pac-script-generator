@@ -300,6 +300,7 @@ func main() {
 		"lingq.com": true, 		// ТСПУ
 		"thealphacentauri.net": true, 	// ТСПУ
 		"notion.so": true,		// blocked in RU
+		"clickup.com": true,		// blocked in RU
 		
 	}
 	for hostname, ifBlocked := range customHostnames {
