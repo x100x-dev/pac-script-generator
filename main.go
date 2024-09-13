@@ -299,8 +299,9 @@ func main() {
 		"howlongtobeat.com": true,	// blocked in RU
 		"lingq.com": true, 		// ТСПУ
 		"thealphacentauri.net": true, 	// ТСПУ
-		"notion.so": true,		// blocked in RU
-		"clickup.com": true,		// blocked in RU
+		"notion.so": true,		// content blocked in RU
+		"clickup.com": true,		// content blocked in RU
+		"recraft.ai": true,		// content blocked in RU
 		
 	}
 	for hostname, ifBlocked := range customHostnames {
