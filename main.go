@@ -302,6 +302,7 @@ func main() {
 		"notion.so": true,		// content blocked in RU
 		"clickup.com": true,		// content blocked in RU
 		"recraft.ai": true,		// content blocked in RU
+		"kinoplay2.site": true,		// ТСПУ
 		
 	}
 	for hostname, ifBlocked := range customHostnames {
