@@ -303,7 +303,7 @@ func main() {
 		"clickup.com": true,		// content blocked in RU
 		"recraft.ai": true,		// content blocked in RU
 		"kinoplay2.site": true,		// ТСПУ
-		"gethomebank.org": true		// blocked in RU
+		"gethomebank.org": true,	// blocked in RU
 		
 	}
 	for hostname, ifBlocked := range customHostnames {
