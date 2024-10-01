@@ -304,6 +304,7 @@ func main() {
 		"recraft.ai": true,		// content blocked in RU
 		"kinoplay2.site": true,		// ТСПУ
 		"gethomebank.org": true,	// blocked in RU
+		"themoviedb.org": true,		// blocked in RU
 		
 	}
 	for hostname, ifBlocked := range customHostnames {
