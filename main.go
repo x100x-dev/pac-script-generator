@@ -305,8 +305,6 @@ func main() {
 		"kinoplay2.site": true,		// ТСПУ
 		"gethomebank.org": true,	// blocked in RU
 		"themoviedb.org": true,		// blocked in RU
-		"discord.com": true,		// ТСПУ
-		"discordapp.com": true,		// ТСПУ
 		
 	}
 	for hostname, ifBlocked := range customHostnames {
