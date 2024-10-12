@@ -308,6 +308,7 @@ func main() {
 		"themoviedb.org": true,		// blocked in RU
 		"optimism.io": true,		// blocked in RU
 		"documentingreality.com": true,	// blocked in RU
+		"coda.io": true,		// blocked in RU
 		
 	}
 	for hostname, ifBlocked := range customHostnames {
