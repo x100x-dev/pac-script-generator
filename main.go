@@ -310,6 +310,7 @@ func main() {
 		"documentingreality.com": true,	// blocked in RU
 		"coda.io": true,		// blocked in RU
 		"puffer.fi": true,		// blocked in RU
+		"kamino.finance": true,		// content blocked in RU
 		
 	}
 	for hostname, ifBlocked := range customHostnames {
