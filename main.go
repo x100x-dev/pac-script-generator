@@ -312,6 +312,7 @@ func main() {
 		"puffer.fi": true,		// blocked in RU
 		"kamino.finance": true,		// content blocked in RU
 		"debridge.foundation": true,	// blocked in RU
+		"zora.co": true,		// blocked in RU
 		
 	}
 	for hostname, ifBlocked := range customHostnames {
