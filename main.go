@@ -316,6 +316,7 @@ func main() {
 		"govgen.io": true,		// blocked in RU
 		"saga.xyz": true,		// blocked in RU
 		"grassfoundation.io": true,	// content blocked in RU
+		"getgrass.io": true,		// check ip for grassfoundation.io
 		
 	}
 	for hostname, ifBlocked := range customHostnames {
