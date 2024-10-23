@@ -27,8 +27,8 @@ import (
 	"golang.org/x/text/transform"
 )
 
-var ifForced = flag.Bool("force", false, "If to ignore checking of an updated dump.csv available")
-//var ifForced = flag.Bool("force", true, "If to ignore checking of an updated dump.csv available")
+//var ifForced = flag.Bool("force", false, "If to ignore checking of an updated dump.csv available")
+var ifForced = flag.Bool("force", true, "If to ignore checking of an updated dump.csv available")
 
 type blockProvider struct {
 	urls   []string
@@ -317,6 +317,7 @@ func main() {
 		"saga.xyz": true,		// blocked in RU
 		"grassfoundation.io": true,	// content blocked in RU
 		"getgrass.io": true,		// check ip for grassfoundation.io
+		"forum.ru-board.com": true,	// blocked in RU
 		
 	}
 	for hostname, ifBlocked := range customHostnames {
