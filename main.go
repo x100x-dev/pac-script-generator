@@ -318,6 +318,7 @@ func main() {
 		"grassfoundation.io": true,	// content blocked in RU
 		"getgrass.io": true,		// check ip for grassfoundation.io
 		"forum.ru-board.com": true,	// blocked in RU
+		"download.nvidia.com": true,	// content blocked in RU: https://www.nvidia.com/ru-ru/drivers/details/233417/
 		
 	}
 	for hostname, ifBlocked := range customHostnames {
