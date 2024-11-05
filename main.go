@@ -319,7 +319,7 @@ func main() {
 		"getgrass.io": true,		// check ip for grassfoundation.io
 		"forum.ru-board.com": true,	// blocked in RU
 		"orbit-games.com": true,	// blocked in RU
-			
+		"hetzner.com": true,		// ТСПУ	
 	}
 	for hostname, ifBlocked := range customHostnames {
 		HOSTNAMES[hostname] = ifBlocked
