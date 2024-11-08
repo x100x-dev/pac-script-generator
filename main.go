@@ -320,7 +320,8 @@ func main() {
 		"forum.ru-board.com": true,	// blocked in RU
 		"orbit-games.com": true,	// blocked in RU
 		"hetzner.com": true,		// ТСПУ
-		"audiobookbay.lu": true,	// ТСПУ	
+		"audiobookbay.lu": true,	// ТСПУ
+		"icy-veins.com": true,		// ECH ТСПУ	
 	}
 	for hostname, ifBlocked := range customHostnames {
 		HOSTNAMES[hostname] = ifBlocked
