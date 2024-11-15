@@ -321,9 +321,13 @@ func main() {
 		"orbit-games.com": true,	// blocked in RU
 		"hetzner.com": true,		// ТСПУ
 		"audiobookbay.lu": true,	// ТСПУ
-		"icy-veins.com": true,		// ECH ТСПУ
-		"steamdb.info": true,		// ECH ТСПУ
-		"bnbfree.in": true,		// ECH ТСПУ
+		
+		// ECH (CloudFlare) ТСПУ
+		"icy-veins.com": true,	
+		"steamdb.info": true,
+		"bnbfree.in": true,
+		"surasoft.ru": true,
+		"nnmstatic.win": true,
 	}
 	for hostname, ifBlocked := range customHostnames {
 		HOSTNAMES[hostname] = ifBlocked
