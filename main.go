@@ -328,6 +328,8 @@ func main() {
 		"bnbfree.in": true,
 		"surasoft.ru": true,
 		"nnmstatic.win": true,
+		"torrnado.space": true,
+		"xn--80aizddian.xn--p1ai": true,
 	}
 	for hostname, ifBlocked := range customHostnames {
 		HOSTNAMES[hostname] = ifBlocked
