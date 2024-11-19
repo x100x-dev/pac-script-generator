@@ -321,6 +321,7 @@ func main() {
 		"orbit-games.com": true,	// blocked in RU
 		"hetzner.com": true,		// ТСПУ
 		"audiobookbay.lu": true,	// ТСПУ
+		"humblebundle.com": true,	// blocked in RU
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
