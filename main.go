@@ -333,6 +333,7 @@ func main() {
 		"torrnado.space": true,
 		"xn--80aizddian.xn--p1ai": true,
 		"emcd.io": true,
+		"languagelearning.site": true,
 	}
 	for hostname, ifBlocked := range customHostnames {
 		HOSTNAMES[hostname] = ifBlocked
