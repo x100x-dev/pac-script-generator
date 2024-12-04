@@ -323,6 +323,7 @@ func main() {
 		"audiobookbay.lu": true,	// ТСПУ
 		"humblebundle.com": true,	// blocked in RU
 		"capacitorjs.com": true,	// blocked in RU
+		"blur.io": true,		// blocked in RU
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
