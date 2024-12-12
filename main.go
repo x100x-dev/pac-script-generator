@@ -325,6 +325,7 @@ func main() {
 		"humblebundle.com": true,	// blocked in RU
 		"capacitorjs.com": true,	// blocked in RU
 		"blur.io": true,		// blocked in RU
+		"notepad-plus-plus.org": true,	// blocked in RU
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
