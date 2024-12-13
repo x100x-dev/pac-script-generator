@@ -269,6 +269,7 @@ func main() {
 		"nnm-club.name":   true,
 		"rutor.info":      true,
 		"free-rutor.org":  true,
+		"doramacine.in":  true,
 		// Rutracker complaints:
 		"static.t-ru.org": true,
 		
