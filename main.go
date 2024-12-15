@@ -328,6 +328,8 @@ func main() {
 		"blur.io": true,		// blocked in RU
 		"notepad-plus-plus.org": true,	// blocked in RU
 		"viber.com": true,		// ТСПУ
+		"forums.mydigitallife.net": true,	// ТСПУ
+		"nsaneforums.com": true,		// ТСПУ
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
