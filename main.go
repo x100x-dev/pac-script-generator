@@ -174,6 +174,8 @@ func main() {
 		"www.youtube.com": true,
 		"googlevideo.com": true,
 		".googlevideo.com": true,
+		"prostovpn.org": true,
+		"antizapret.prostovpn.org": true,
 	}
 	scanner := bufio.NewScanner(response.Body)
 	for scanner.Scan() {
