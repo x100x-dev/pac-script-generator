@@ -332,6 +332,7 @@ func main() {
 		"viber.com": true,		// ТСПУ
 		"forums.mydigitallife.net": true,	// ТСПУ
 		"nsaneforums.com": true,		// ТСПУ
+		"investsocial.com": true,		// ТСПУ
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
