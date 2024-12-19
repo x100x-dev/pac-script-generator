@@ -331,8 +331,9 @@ func main() {
 		"notepad-plus-plus.org": true,	// blocked in RU
 		"viber.com": true,		// ТСПУ
 		"forums.mydigitallife.net": true,	// ТСПУ
-		"nsaneforums.com": true,		// ТСПУ
-		"investsocial.com": true,		// ТСПУ
+		"nsaneforums.com": true,	// ТСПУ
+		"investsocial.com": true,	// ТСПУ
+		"elevenlabs.io": true,		// blocked in RU
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
