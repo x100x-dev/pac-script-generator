@@ -334,6 +334,7 @@ func main() {
 		"nsaneforums.com": true,	// ТСПУ
 		"investsocial.com": true,	// ТСПУ
 		"elevenlabs.io": true,		// blocked in RU
+		"sora.com": true,		// blocked in RU
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
