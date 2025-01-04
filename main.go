@@ -336,6 +336,7 @@ func main() {
 		"elevenlabs.io": true,		// blocked in RU
 		"sora.com": true,		// blocked in RU
 		"whoer.net": true,		// blocked in RU
+		"c3pool.com": true,		// ТСПУ
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
