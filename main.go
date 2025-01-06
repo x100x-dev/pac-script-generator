@@ -337,6 +337,8 @@ func main() {
 		"sora.com": true,		// blocked in RU
 		"whoer.net": true,		// blocked in RU
 		"c3pool.com": true,		// ТСПУ
+		"devexpress.com": true,		// blocked in RU
+		"meta.ai": true,		// blocked in RU
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
