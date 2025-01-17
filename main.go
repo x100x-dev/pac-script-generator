@@ -339,6 +339,12 @@ func main() {
 		"c3pool.com": true,		// ТСПУ
 		"devexpress.com": true,		// blocked in RU
 		"meta.ai": true,		// blocked in RU
+		"portal.lisk.com": true,	// blocked in RU
+		"superbridge.app": true,	// blocked in RU
+		"app.milkyway.zone": true,	// blocked in RU
+		"app.nept.finance": true,	// blocked in RU
+		"quasar.fi": true,		// blocked in RU
+		"levana.finance": true,		// blocked in RU
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
