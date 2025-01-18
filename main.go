@@ -345,6 +345,8 @@ func main() {
 		"app.nept.finance": true,	// blocked in RU
 		"quasar.fi": true,		// blocked in RU
 		"levana.finance": true,		// blocked in RU
+		"aistudio.google.com": true,	// blocked in RU
+		"ai.google.dev": true,		// blocked in RU
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
