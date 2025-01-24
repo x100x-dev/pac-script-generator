@@ -349,6 +349,7 @@ func main() {
 		"ai.google.dev": true,		// blocked in RU
 		"alkalimakersuite-pa.clients6.google.com": true,		// domain checks GEO for site aistudio.google.com
 		"waa-pa.clients6.google.com": true,		// domain checks GEO for site aistudio.google.com
+		"horizen.io": true,		// blocked in RU
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
