@@ -352,6 +352,7 @@ func main() {
 		"horizen.io": true,		// blocked in RU
 		"autogeriko.com": true,		// blocked in RU
 		"w.wormhole.com": true,		// blocked in RU
+		"curseforge.com": true,		// 403 - blocked in RU
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
