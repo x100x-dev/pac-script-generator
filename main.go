@@ -354,6 +354,7 @@ func main() {
 		"w.wormhole.com": true,		// blocked in RU
 		"curseforge.com": true,		// 403 - blocked in RU
 		"weights.gg": true,		// 403 - blocked in RU
+		"pump.fun": true,		// 403 - blocked in RU
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
