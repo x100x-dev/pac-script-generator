@@ -355,6 +355,7 @@ func main() {
 		"curseforge.com": true,		// 403 - blocked in RU
 		"weights.gg": true,		// 403 - blocked in RU
 		"pump.fun": true,		// 403 - blocked in RU
+		"indiakino.org": true,		// ТСПУ
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
