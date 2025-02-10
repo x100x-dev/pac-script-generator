@@ -356,6 +356,7 @@ func main() {
 		"weights.gg": true,		// 403 - blocked in RU
 		"pump.fun": true,		// 403 - blocked in RU
 		"indiakino.org": true,		// ТСПУ
+		"tapecontent.net": true,	// 403 - blocked in RU
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
