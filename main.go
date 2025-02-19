@@ -358,6 +358,8 @@ func main() {
 		"pump.fun": true,		// 403 - blocked in RU
 		"indiakino.org": true,		// ТСПУ
 		"tapecontent.net": true,	// 403 - blocked in RU
+		"grok.com": true,		// blocked in RU
+		"potplayer.ru": true,		// ТСПУ
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
