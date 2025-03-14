@@ -363,6 +363,7 @@ func main() {
 		"spacex.com": true,		// content blocked in RU
 		"libgen.st": true,		// host in Ukraine
 		"libgen.rs": true,		// host in Ukraine
+		"books.ms": true,		// host in Ukraine
 		
 		
 		// ECH (CloudFlare) ТСПУ
