@@ -365,6 +365,7 @@ func main() {
 		"libgen.st": true,		// host in Ukraine
 		"libgen.rs": true,		// host in Ukraine
 		"books.ms": true,		// host in Ukraine
+		"myfonts.com": true,		// 403 - blocked in RU
 		
 		
 		// ECH (CloudFlare) ТСПУ
