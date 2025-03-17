@@ -359,6 +359,7 @@ func main() {
 		"indiakino.org": true,		// ТСПУ
 		"tapecontent.net": true,	// 403 - blocked in RU
 		"grok.com": true,		// blocked in RU
+		"x.ai": true,			// blocked in RU
 		"truthsocial.com": true,	// 403 - blocked in RU
 		"spacex.com": true,		// content blocked in RU
 		"libgen.st": true,		// host in Ukraine
