@@ -366,6 +366,9 @@ func main() {
 		"libgen.rs": true,		// host in Ukraine
 		"books.ms": true,		// host in Ukraine
 		"myfonts.com": true,		// 403 - blocked in RU
+		"terra.money": true,		// blocked in RU
+		"dojo.trading": true,		// blocked in RU
+		"astroport.fi": true,		// blocked in RU
 		
 		
 		// ECH (CloudFlare) ТСПУ
