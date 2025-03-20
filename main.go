@@ -369,6 +369,7 @@ func main() {
 		"terra.money": true,		// blocked in RU
 		"dojo.trading": true,		// blocked in RU
 		"astroport.fi": true,		// blocked in RU
+		"assets.teinon.net": true,	// blocked in RU
 		
 		
 		// ECH (CloudFlare) ТСПУ
