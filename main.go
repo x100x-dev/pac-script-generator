@@ -370,6 +370,7 @@ func main() {
 		"dojo.trading": true,		// blocked in RU
 		"astroport.fi": true,		// blocked in RU
 		"assets.teinon.net": true,	// blocked in RU
+		"pixwox.com": true,		// blocked in RU
 		
 		
 		// ECH (CloudFlare) ТСПУ
