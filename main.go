@@ -167,7 +167,6 @@ func main() {
 		"ytimg.com": true,
 		"i.ytimg.com": true,
 		"tiktok.com": true,
-		"joyreactor.cc": true,
 		"ggpht.com": true,
 		"akamaihd.net": true,
 		"youtube.com": true,
@@ -385,6 +384,7 @@ func main() {
 		"xn--80aizddian.xn--p1ai": true,
 		"emcd.io": true,
 		"languagelearning.site": true,
+		"joyreactor.cc": true,
 	}
 	for hostname, ifBlocked := range customHostnames {
 		HOSTNAMES[hostname] = ifBlocked
