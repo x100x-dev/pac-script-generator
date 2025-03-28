@@ -370,8 +370,11 @@ func main() {
 		"astroport.fi": true,		// blocked in RU
 		"assets.teinon.net": true,	// blocked in RU
 		"pixwox.com": true,		// blocked in RU
+		"pixnoy.com": true,		// blocked in RU
 		"mantra.zone": true,		// blocked in RU
 		"mynearwallet.com": true,	// blocked in RU
+		"btdig.com": true,		// blocked in RU
+		"readymag.com": true,		// blocked in RU
 		
 		
 		// ECH (CloudFlare) ТСПУ
