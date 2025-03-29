@@ -375,6 +375,7 @@ func main() {
 		"mynearwallet.com": true,	// blocked in RU
 		"btdig.com": true,		// blocked in RU
 		"readymag.com": true,		// blocked in RU
+		"mintchain.io": true,		// blocked in RU
 		
 		
 		// ECH (CloudFlare) ТСПУ
