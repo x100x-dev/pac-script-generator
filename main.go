@@ -391,6 +391,7 @@ func main() {
 		"joyreactor.cc": true,
 		"lostfilm.top": true,
 		"insearch.site": true,
+		"dessi.co": true,
 	}
 	for hostname, ifBlocked := range customHostnames {
 		HOSTNAMES[hostname] = ifBlocked
