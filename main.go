@@ -378,6 +378,7 @@ func main() {
 		"mintchain.io": true,		// blocked in RU
 		"sndcdn.com": true,		// ТСПУ
 		"arras.io": true,		// ТСПУ
+		"nexusmods.com": true,		// ТСПУ
 		
 		
 		// ECH (CloudFlare) ТСПУ
