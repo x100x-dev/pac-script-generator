@@ -379,6 +379,8 @@ func main() {
 		"sndcdn.com": true,		// ТСПУ
 		"arras.io": true,		// ТСПУ
 		"nexusmods.com": true,		// ТСПУ
+		"faz.net": true,		// ТСПУ
+		"spiegel.de": true,		// ТСПУ
 		
 		
 		// ECH (CloudFlare) ТСПУ
