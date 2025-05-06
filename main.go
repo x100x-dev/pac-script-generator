@@ -381,6 +381,8 @@ func main() {
 		"nexusmods.com": true,		// ТСПУ
 		"faz.net": true,		// ТСПУ
 		"spiegel.de": true,		// ТСПУ
+		"free-barcode-generator.net": true,	// blocked in RU
+		"xhcdn.com": true,		// ТСПУ
 		
 		
 		// ECH (CloudFlare) ТСПУ
