@@ -379,6 +379,7 @@ func main() {
 		"sndcdn.com": true,		// ТСПУ
 		"arras.io": true,		// ТСПУ
 		"nexusmods.com": true,		// ТСПУ
+		"nexus-cdn.com": true,		// ТСПУ
 		"faz.net": true,		// ТСПУ
 		"spiegel.de": true,		// ТСПУ
 		"free-barcode-generator.net": true,	// blocked in RU
