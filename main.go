@@ -384,6 +384,7 @@ func main() {
 		"spiegel.de": true,		// ТСПУ
 		"free-barcode-generator.net": true,	// blocked in RU
 		"xhcdn.com": true,		// ТСПУ
+		"hoerzu.de": true,		// ТСПУ
 		
 		
 		// ECH (CloudFlare) ТСПУ
