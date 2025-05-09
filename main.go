@@ -387,6 +387,7 @@ func main() {
 		"xvideos-cdn.com": true,	// ТСПУ
 		"hoerzu.de": true,		// ТСПУ
 		"dnb.com": true,		// blocked in RU
+		"shop.gameloft.com": true,	// blocked in RU
 		
 		
 		// ECH (CloudFlare) ТСПУ
