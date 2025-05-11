@@ -388,6 +388,7 @@ func main() {
 		"hoerzu.de": true,		// ТСПУ
 		"dnb.com": true,		// blocked in RU
 		"shop.gameloft.com": true,	// blocked in RU
+		"creality.com": true,		// ТСПУ
 		
 		
 		// ECH (CloudFlare) ТСПУ
