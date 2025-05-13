@@ -389,6 +389,7 @@ func main() {
 		"dnb.com": true,		// blocked in RU
 		"shop.gameloft.com": true,	// blocked in RU
 		"creality.com": true,		// ТСПУ
+		"imgxclub.com": true,		// ТСПУ
 		
 		
 		// ECH (CloudFlare) ТСПУ
