@@ -391,6 +391,7 @@ func main() {
 		"creality.com": true,		// ТСПУ
 		"imgxclub.com": true,		// ТСПУ
 		"ti.com": true,			// ТСПУ
+		"manus.im": true,		// blocked in RU
 		
 		
 		// ECH (CloudFlare) ТСПУ
