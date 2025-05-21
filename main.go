@@ -395,6 +395,7 @@ func main() {
 		"notebooklm.google.com": true,	// blocked in RU
 		"notebooklm.google": true,	// blocked in RU
 		"bsky.app": true,		// ТСПУ
+		"bigsv.ru": true,		// ТСПУ - css/js for seasonvar.ru
 		
 		
 		// ECH (CloudFlare) ТСПУ
