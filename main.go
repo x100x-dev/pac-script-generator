@@ -394,6 +394,7 @@ func main() {
 		"manus.im": true,		// blocked in RU
 		"notebooklm.google.com": true,	// blocked in RU
 		"notebooklm.google": true,	// blocked in RU
+		"bsky.app": true,		// ТСПУ
 		
 		
 		// ECH (CloudFlare) ТСПУ
