@@ -398,6 +398,8 @@ func main() {
 		"bigsv.ru": true,		// ТСПУ - css/js for seasonvar.ru
 		"musify.club": true,		// ТСПУ
 		"supercell.com": true,		// blocked in RU
+		"framer.com": true,		// blocked in RU
+		"mangapicgallery.com": true,	// ТСПУ
 		
 		
 		// ECH (CloudFlare) ТСПУ
