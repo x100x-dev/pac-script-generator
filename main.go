@@ -400,6 +400,7 @@ func main() {
 		"supercell.com": true,		// blocked in RU
 		"framer.com": true,		// blocked in RU
 		"mangapicgallery.com": true,	// ТСПУ
+		"bridgestone.com": true,	// blocked in RU
 		
 		
 		// ECH (CloudFlare) ТСПУ
