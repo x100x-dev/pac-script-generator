@@ -38,7 +38,7 @@ type blockProvider struct {
 var blockProviders = []blockProvider{
 	blockProvider{
 		urls: []string{
-			"https://raw.githubusercontent.com/zapret-info/z-i/master/dump.csv",
+			"https://raw.githubusercontent.com/zapret-info/z-i/master/dump-00.csv",
 		},
 		rssUrl: "https://github.com/zapret-info/z-i/commits/master.atom",
 	},	
