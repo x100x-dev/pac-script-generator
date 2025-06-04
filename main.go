@@ -42,18 +42,18 @@ var blockProviders = []blockProvider{
 	//	},
 	//	rssUrl: "https://github.com/zapret-info/z-i/commits/master.atom",
 	//},	
-	//blockProvider{
-	//	urls: []string{
-	//		"https://svn.code.sf.net/p/zapret-info/code/dump.csv",
-	//	},
-	//	rssUrl: "https://sourceforge.net/p/zapret-info/code/feed",
-	//},
-	blockProvider {
+	blockProvider{
 		urls: []string{
-			"https://app.assembla.com/spaces/z-i/git/source/master/dump.csv?_format=raw",
+			"https://svn.code.sf.net/p/zapret-info/code/dump.csv",
 		},
-		rssUrl: "https://app.assembla.com/spaces/z-i/stream.rss",
+		rssUrl: "https://sourceforge.net/p/zapret-info/code/feed",
 	},
+	//blockProvider {
+	//	urls: []string{
+	//		"https://app.assembla.com/spaces/z-i/git/source/master/dump.csv?_format=raw",
+	//	},
+	//	rssUrl: "https://app.assembla.com/spaces/z-i/stream.rss",
+	//},
 }
 
 var get = func(url string) (*http.Response, error) {
