@@ -36,18 +36,18 @@ type blockProvider struct {
 }
 
 var blockProviders = []blockProvider{
-	//blockProvider{
-	//	urls: []string{
-	//		"https://raw.githubusercontent.com/zapret-info/z-i/master/dump.csv",
-	//	},
-	//	rssUrl: "https://github.com/zapret-info/z-i/commits/master.atom",
-	//},	
 	blockProvider{
 		urls: []string{
-			"https://svn.code.sf.net/p/zapret-info/code/dump.csv",
+			"https://raw.githubusercontent.com/zapret-info/z-i/master/dump.csv",
 		},
-		rssUrl: "https://sourceforge.net/p/zapret-info/code/feed",
-	},
+		rssUrl: "https://github.com/zapret-info/z-i/commits/master.atom",
+	},	
+	//blockProvider{
+	//	urls: []string{
+	//		"https://svn.code.sf.net/p/zapret-info/code/dump.csv",
+	//	},
+	//	rssUrl: "https://sourceforge.net/p/zapret-info/code/feed",
+	//},
 	//blockProvider {
 	//	urls: []string{
 	//		"https://app.assembla.com/spaces/z-i/git/source/master/dump.csv?_format=raw",
