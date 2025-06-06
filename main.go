@@ -401,6 +401,7 @@ func main() {
 		"framer.com": true,		// blocked in RU
 		"mangapicgallery.com": true,	// ТСПУ
 		"bridgestone.com": true,	// blocked in RU
+		"bridgestonemotorcycletires.com": true,	// blocked in RU
 		
 		
 		// ECH (CloudFlare) ТСПУ
