@@ -27,8 +27,8 @@ import (
 	"golang.org/x/text/transform"
 )
 
-var ifForced = flag.Bool("force", false, "If to ignore checking of an updated dump.csv available")
-//var ifForced = flag.Bool("force", true, "If to ignore checking of an updated dump.csv available")
+//var ifForced = flag.Bool("force", false, "If to ignore checking of an updated dump.csv available")
+var ifForced = flag.Bool("force", true, "If to ignore checking of an updated dump.csv available")
 
 type blockProvider struct {
 	urls   []string
@@ -415,7 +415,7 @@ func main() {
 		"xn--80aizddian.xn--p1ai": true,
 		"emcd.io": true,
 		"languagelearning.site": true,
-		"joyreactor.cc": true,
+		//"joyreactor.cc": true,
 		"lostfilm.top": true,
 		"insearch.site": true,
 		"dessi.co": true,
