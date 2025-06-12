@@ -403,6 +403,7 @@ func main() {
 		"bridgestone.com": true,	// blocked in RU
 		"bridgestonemotorcycletires.com": true,	// blocked in RU
 		"flourish.studio": true,	// blocked in RU
+		"laratranslate.com": true,	// ТСПУ
 		
 		
 		// ECH (CloudFlare) ТСПУ
