@@ -407,6 +407,7 @@ func main() {
 		"miro.com": true,		// ТСПУ
 		"kicker.de": true,		// blocked in RU
 		"bundesliga.com": true,		// ТСПУ
+		"nba.com": true,		// blocked in RU
 		
 		
 		// ECH (CloudFlare) ТСПУ
