@@ -404,6 +404,9 @@ func main() {
 		"bridgestonemotorcycletires.com": true,	// blocked in RU
 		"flourish.studio": true,	// blocked in RU
 		"laratranslate.com": true,	// ТСПУ
+		"miro.com": true,		// ТСПУ
+		"kicker.de": true,		// blocked in RU
+		"bundesliga.com": true,		// ТСПУ
 		
 		
 		// ECH (CloudFlare) ТСПУ
