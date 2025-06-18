@@ -416,6 +416,7 @@ func main() {
 		"helixapp.com": true,		// ТСПУ
 		"staking-explorer.com": true,	// ТСПУ
 		"deepl.com": true,		// blocked in RU
+		"highwebmedia.com": true,	// wss for chaturbate.com
 		
 		
 		// ECH (CloudFlare) ТСПУ
