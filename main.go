@@ -417,6 +417,7 @@ func main() {
 		"staking-explorer.com": true,	// ТСПУ
 		"deepl.com": true,		// blocked in RU
 		"highwebmedia.com": true,	// wss for chaturbate.com
+		"autodesk.com": true,		// blocked in RU
 		
 		
 		// ECH (CloudFlare) ТСПУ
