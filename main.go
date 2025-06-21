@@ -418,6 +418,7 @@ func main() {
 		"deepl.com": true,		// blocked in RU
 		"highwebmedia.com": true,	// wss for chaturbate.com
 		"autodesk.com": true,		// blocked in RU
+		"milanote.com": true,		// ТСПУ
 		
 		
 		// ECH (CloudFlare) ТСПУ
