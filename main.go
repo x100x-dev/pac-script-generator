@@ -419,6 +419,7 @@ func main() {
 		"highwebmedia.com": true,	// wss for chaturbate.com
 		"autodesk.com": true,		// blocked in RU
 		"milanote.com": true,		// ТСПУ
+		"motor1.com": true,		// blocked in RU
 		
 		
 		// ECH (CloudFlare) ТСПУ
