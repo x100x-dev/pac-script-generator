@@ -420,6 +420,8 @@ func main() {
 		"autodesk.com": true,		// blocked in RU
 		"milanote.com": true,		// ТСПУ
 		"motor1.com": true,		// blocked in RU
+		"newgrounds.com": true,		// ТСПУ
+		"lookerstudio.google.com": true,	// blocked in RU
 		
 		
 		// ECH (CloudFlare) ТСПУ
