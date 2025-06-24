@@ -422,6 +422,7 @@ func main() {
 		"motor1.com": true,		// blocked in RU
 		"newgrounds.com": true,		// ТСПУ
 		"lookerstudio.google.com": true,	// blocked in RU
+		"infineon.com": true,		// blocked in RU
 		
 		
 		// ECH (CloudFlare) ТСПУ
