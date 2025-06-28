@@ -424,6 +424,7 @@ func main() {
 		"lookerstudio.google.com": true,	// blocked in RU
 		"infineon.com": true,		// blocked in RU
 		"linguee.de": true,		// blocked in RU
+		"geonames.org": true,		// ТСПУ
 		
 		
 		// ECH (CloudFlare) ТСПУ
