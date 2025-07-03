@@ -425,6 +425,7 @@ func main() {
 		"infineon.com": true,		// blocked in RU
 		"linguee.de": true,		// blocked in RU
 		"geonames.org": true,		// ТСПУ
+		"runrepeat.com": true,		// ТСПУ
 		
 		
 		// ECH (CloudFlare) ТСПУ
