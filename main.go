@@ -426,7 +426,7 @@ func main() {
 		"linguee.de": true,		// blocked in RU
 		"geonames.org": true,		// ТСПУ
 		"runrepeat.com": true,		// ТСПУ
-		"leechess.org": true,		// blocked in RU
+		"lichess.org": true,		// ТСПУ
 		
 		
 		// ECH (CloudFlare) ТСПУ
