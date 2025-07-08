@@ -427,6 +427,7 @@ func main() {
 		"geonames.org": true,		// ТСПУ
 		"runrepeat.com": true,		// ТСПУ
 		"lichess.org": true,		// ТСПУ
+		"00v.in": true,			// ТСПУ
 		
 		
 		// ECH (CloudFlare) ТСПУ
