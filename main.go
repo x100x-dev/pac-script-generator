@@ -428,6 +428,8 @@ func main() {
 		"runrepeat.com": true,		// ТСПУ
 		"lichess.org": true,		// ТСПУ
 		"00v.in": true,			// ТСПУ
+		"mw5.community": true,		// blocked in RU
+		"bourns.com": true,		// blocked in RU
 		
 		
 		// ECH (CloudFlare) ТСПУ
