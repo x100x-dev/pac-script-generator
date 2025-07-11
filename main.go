@@ -430,6 +430,7 @@ func main() {
 		"00v.in": true,			// ТСПУ
 		"mw5.community": true,		// blocked in RU
 		"bourns.com": true,		// blocked in RU
+		"te.com": true,			// blocked in RU
 		
 		
 		// ECH (CloudFlare) ТСПУ
