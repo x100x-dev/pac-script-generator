@@ -432,6 +432,8 @@ func main() {
 		"bourns.com": true,		// blocked in RU
 		"te.com": true,			// blocked in RU
 		"digikeyassets.com": true,	// ТСПУ
+		"microsemi.com": true,		// blocked in RU
+		"latticesemi.com": true,	// blocked in RU
 		
 		
 		// ECH (CloudFlare) ТСПУ
