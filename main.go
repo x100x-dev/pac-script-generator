@@ -435,6 +435,8 @@ func main() {
 		"microsemi.com": true,		// blocked in RU
 		"latticesemi.com": true,	// blocked in RU
 		"imdb.com": true,		// ТСПУ
+		"hatchcanvas.com": true,	// blocked in RU
+		"mo.co": true,			// blocked in RU
 		
 		
 		// ECH (CloudFlare) ТСПУ
