@@ -438,6 +438,7 @@ func main() {
 		"hatchcanvas.com": true,	// blocked in RU
 		"mo.co": true,			// blocked in RU
 		"pximg.net": true,		// ТСПУ
+		"githubcopilot.com": true,	// blocked in RU
 		
 		
 		// ECH (CloudFlare) ТСПУ
