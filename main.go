@@ -439,6 +439,8 @@ func main() {
 		"mo.co": true,			// blocked in RU
 		"pximg.net": true,		// ТСПУ
 		"githubcopilot.com": true,	// blocked in RU
+		"godaddy.com": true,		// ТСПУ
+		"tablbrowser.com": true,	// blocked in RU
 		
 		
 		// ECH (CloudFlare) ТСПУ
