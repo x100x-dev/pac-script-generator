@@ -441,6 +441,7 @@ func main() {
 		"githubcopilot.com": true,	// blocked in RU
 		"godaddy.com": true,		// ТСПУ
 		"tablbrowser.com": true,	// blocked in RU
+		"kemono.cr": true,	// blocked in RU
 		
 		
 		// ECH (CloudFlare) ТСПУ
