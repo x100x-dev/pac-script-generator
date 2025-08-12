@@ -442,6 +442,7 @@ func main() {
 		"godaddy.com": true,		// ТСПУ
 		"tablbrowser.com": true,	// blocked in RU
 		"kemono.cr": true,	// blocked in RU
+		"ariscommunity.com": true,	// blocked downloads in RU
 		
 		
 		// ECH (CloudFlare) ТСПУ
