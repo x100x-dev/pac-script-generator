@@ -445,6 +445,7 @@ func main() {
 		"ariscommunity.com": true,	// blocked downloads in RU
 		"studiostaticassetsprod.azureedge.net": true,		// ТСПУ - static content for copilot.microsoft.com
 		"pandasecurity.com": true,	// blocked in RU
+		"bang-olufsen.com": true,	// blocked in RU
 		
 		
 		// ECH (CloudFlare) ТСПУ
