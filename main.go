@@ -447,6 +447,7 @@ func main() {
 		"pandasecurity.com": true,	// blocked in RU
 		"bang-olufsen.com": true,	// blocked in RU
 		"coomer.st": true,	// blocked in RU
+		"gadgetversus.com": true,	// blocked in RU
 		
 		
 		// ECH (CloudFlare) ТСПУ
