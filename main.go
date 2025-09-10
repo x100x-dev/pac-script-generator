@@ -448,7 +448,7 @@ func main() {
 		"bang-olufsen.com": true,	// blocked in RU
 		"coomer.st": true,	// blocked in RU
 		"gadgetversus.com": true,	// blocked in RU
-		
+		"itch.io": true,		// ТСПУ
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
