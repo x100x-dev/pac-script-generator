@@ -449,6 +449,7 @@ func main() {
 		"coomer.st": true,	// blocked in RU
 		"gadgetversus.com": true,	// blocked in RU
 		"itch.io": true,		// ТСПУ
+		"unsplash.com": true,		// ТСПУ
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
