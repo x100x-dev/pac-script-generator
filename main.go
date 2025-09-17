@@ -450,6 +450,7 @@ func main() {
 		"gadgetversus.com": true,	// blocked in RU
 		"itch.io": true,		// ТСПУ
 		"unsplash.com": true,		// ТСПУ
+		"montpellier.fr": true,	// blocked in RU
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
