@@ -451,6 +451,7 @@ func main() {
 		"itch.io": true,		// ТСПУ
 		"unsplash.com": true,		// ТСПУ
 		"montpellier.fr": true,	// blocked in RU
+		"xerox.com": true,	// blocked in RU
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
