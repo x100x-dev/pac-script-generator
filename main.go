@@ -452,6 +452,8 @@ func main() {
 		"unsplash.com": true,		// ТСПУ
 		"montpellier.fr": true,	// blocked in RU
 		"xerox.com": true,	// blocked in RU
+		"periodika.lv": true,	// blocked in RU
+		"digar.ee": true,	// blocked in RU
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
