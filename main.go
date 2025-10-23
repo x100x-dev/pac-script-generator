@@ -454,7 +454,6 @@ func main() {
 		"xerox.com": true,	// blocked in RU
 		"periodika.lv": true,	// blocked in RU
 		"digar.ee": true,	// blocked in RU
-		"audiobookbay.lu": true,	// blocked in RU
 		"telegram.org": true,		// ТСПУ
 		"ibb.co": true,		// ТСПУ
 		"simgbb.com": true,		// ТСПУ
