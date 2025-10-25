@@ -457,6 +457,9 @@ func main() {
 		"telegram.org": true,		// ТСПУ
 		"ibb.co": true,		// ТСПУ
 		"simgbb.com": true,		// ТСПУ
+		"metalarea.org": true,		// ТСПУ
+		"soquest.xyz": true,		// ТСПУ
+		"oraidex.io": true,		// ТСПУ
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
