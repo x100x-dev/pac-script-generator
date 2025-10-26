@@ -294,6 +294,7 @@ func main() {
 		"wildstat.com": true,		// blocked in RU
 		"tria.ge": true, 		// blocked in RU
 		"rulate.ru": true,		// content blocked in RU
+		"fanficus.com": true, 		// ТСПУ
 		"fanficus-server-mirror-879c30cd977f.herokuapp.com": true,		// domain checks GEO for site fanficus.com
 		"apollo.farm": true,		// blocked in RU
 		"station.money": true,		// blocked in RU
