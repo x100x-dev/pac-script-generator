@@ -461,6 +461,9 @@ func main() {
 		"metalarea.org": true,		// ТСПУ
 		"soquest.xyz": true,		// ТСПУ
 		"oraidex.io": true,		// ТСПУ
+		"mega.nz": true,		// ТСПУ
+		"mega.co.nz": true,		// ТСПУ
+		"mega.io": true,		// ТСПУ
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
