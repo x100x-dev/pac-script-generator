@@ -464,6 +464,7 @@ func main() {
 		"mega.nz": true,		// ТСПУ
 		"mega.co.nz": true,		// ТСПУ
 		"mega.io": true,		// ТСПУ
+		"spriters-resource.com": true,		// ТСПУ
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
