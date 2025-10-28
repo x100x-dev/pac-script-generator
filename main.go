@@ -465,6 +465,7 @@ func main() {
 		"mega.co.nz": true,		// ТСПУ
 		"mega.io": true,		// ТСПУ
 		"spriters-resource.com": true,		// ТСПУ
+		"parisaeroport.fr": true,	// blocked in RU
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
