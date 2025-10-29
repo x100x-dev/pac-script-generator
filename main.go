@@ -468,6 +468,7 @@ func main() {
 		"parisaeroport.fr": true,	// blocked in RU
 		"tuta.io": true,		// ТСПУ
 		"tuta.com": true,		// ТСПУ
+		"mf.life": true,		// ТСПУ
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
