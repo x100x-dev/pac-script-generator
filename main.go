@@ -469,6 +469,10 @@ func main() {
 		"tuta.io": true,		// ТСПУ
 		"tuta.com": true,		// ТСПУ
 		"mf.life": true,		// ТСПУ
+		"assets.twitch.tv": true,		// ТСПУ
+		"soundcloud.cloud": true,		// ТСПУ
+		"archdaily.com": true,		// ТСПУ
+		"fracturae.com": true,		// ТСПУ
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
