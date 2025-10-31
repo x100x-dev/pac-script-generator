@@ -474,6 +474,8 @@ func main() {
 		"upload.ee": true,		// ТСПУ
 		"umputun.com": true,		// ТСПУ
 		"convertio.co": true,		// ТСПУ
+		"mtgtop8.com": true,		// ТСПУ
+		"fastpic.org": true,		// ТСПУ
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
