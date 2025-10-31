@@ -476,6 +476,7 @@ func main() {
 		"convertio.co": true,		// ТСПУ
 		"mtgtop8.com": true,		// ТСПУ
 		"fastpic.org": true,		// ТСПУ
+		"metapix.net": true,		// ТСПУ
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
