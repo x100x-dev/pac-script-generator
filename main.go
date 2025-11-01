@@ -477,6 +477,9 @@ func main() {
 		"mtgtop8.com": true,		// ТСПУ
 		"fastpic.org": true,		// ТСПУ
 		"metapix.net": true,		// ТСПУ
+		"roland.com": true,		// ТСПУ
+		"musicstore.com": true,		// ТСПУ
+		"losslessclub.com": true,		// ТСПУ
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
