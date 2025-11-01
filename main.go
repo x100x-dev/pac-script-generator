@@ -480,6 +480,7 @@ func main() {
 		"roland.com": true,		// ТСПУ
 		"musicstore.com": true,		// ТСПУ
 		"losslessclub.com": true,		// ТСПУ
+		"mtgpics.com": true,		// ТСПУ
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
