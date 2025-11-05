@@ -482,6 +482,7 @@ func main() {
 		"losslessclub.com": true,		// ТСПУ
 		"mtgpics.com": true,		// ТСПУ
 		"tesall.club": true,		// Hetzner
+		"kernel.org": true,		// ТСПУ
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
