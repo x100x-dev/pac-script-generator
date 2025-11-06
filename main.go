@@ -483,6 +483,8 @@ func main() {
 		"mtgpics.com": true,		// ТСПУ
 		"tesall.club": true,		// Hetzner
 		"kernel.org": true,		// ТСПУ
+		"runwayml.com": true,		// Amazon
+		"cellmapper.net": true,		// OVH
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
