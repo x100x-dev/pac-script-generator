@@ -485,6 +485,7 @@ func main() {
 		"kernel.org": true,		// ТСПУ
 		"runwayml.com": true,		// Amazon
 		"cellmapper.net": true,		// OVH
+		"club-nikon.ru": true,		// Hetzner
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
