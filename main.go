@@ -486,6 +486,7 @@ func main() {
 		"runwayml.com": true,		// Amazon
 		"cellmapper.net": true,		// OVH
 		"club-nikon.ru": true,		// Hetzner
+		"images.musicstore.de": true,		// Akamai
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
