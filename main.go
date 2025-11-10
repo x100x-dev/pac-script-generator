@@ -487,6 +487,7 @@ func main() {
 		"cellmapper.net": true,		// OVH
 		"club-nikon.ru": true,		// Hetzner
 		"images.musicstore.de": true,		// Akamai
+		"merkl.xyz": true,		// ТСПУ
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
