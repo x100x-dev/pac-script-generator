@@ -488,6 +488,7 @@ func main() {
 		"club-nikon.ru": true,		// Hetzner
 		"images.musicstore.de": true,		// Akamai
 		"merkl.xyz": true,		// ТСПУ
+		"steinberg.net": true,		// Amazon
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
