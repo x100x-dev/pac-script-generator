@@ -491,6 +491,7 @@ func main() {
 		"steinberg.net": true,		// Amazon
 		"allcinema.net": true,		// Contabo
 		"d-addicts.com": true,		// OVH
+		"puzzlegarage.com": true,		// Hetzner
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
