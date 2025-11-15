@@ -489,6 +489,8 @@ func main() {
 		"images.musicstore.de": true,		// Akamai
 		"merkl.xyz": true,		// ТСПУ
 		"steinberg.net": true,		// Amazon
+		"allcinema.net": true,		// Contabo
+		"d-addicts.com": true,		// OVH
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
