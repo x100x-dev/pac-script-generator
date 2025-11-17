@@ -494,6 +494,7 @@ func main() {
 		"puzzlegarage.com": true,		// Hetzner
 		"mui.com": true,		// Amazon
 		"nordkeyboards.com": true,		// Cloudflare
+		"hp.com": true,		// Amazon
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
