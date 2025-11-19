@@ -495,6 +495,7 @@ func main() {
 		"mui.com": true,		// Amazon
 		"nordkeyboards.com": true,		// Cloudflare
 		"hp.com": true,		// Amazon
+		"askastrologer.org": true,		// Hetzner
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
