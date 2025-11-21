@@ -500,6 +500,10 @@ func main() {
 		"furtails.pw": true,		// DigitalOcean
 		"sograph.xyz": true,		// Amazon
 		"walletlink.org": true,		// Cloudflare
+		"sportsnet.ca": true,		// Akamai
+		"tsn.ca": true,		// Akamai
+		"720pier.ru": true,		// Crea Nova
+		"espn.com": true,		// Amazon
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
