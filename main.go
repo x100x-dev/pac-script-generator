@@ -497,6 +497,9 @@ func main() {
 		"hp.com": true,		// Amazon
 		"askastrologer.org": true,		// Hetzner
 		"kinokong.li": true,		// РКН
+		"furtails.pw": true,		// DigitalOcean
+		"sograph.xyz": true,		// Amazon
+		"walletlink.org": true,		// Cloudflare
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
