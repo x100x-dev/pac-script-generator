@@ -504,6 +504,8 @@ func main() {
 		"tsn.ca": true,		// Akamai
 		"720pier.ru": true,		// Crea Nova
 		"espn.com": true,		// Amazon
+		"cosmos-apis.com": true,		// Cloudflare
+		"skip.money": true,		// Amazon
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
