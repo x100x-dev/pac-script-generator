@@ -506,6 +506,8 @@ func main() {
 		"espn.com": true,		// Amazon
 		"cosmos-apis.com": true,		// Cloudflare
 		"skip.money": true,		// Amazon
+		"rudub.pics": true,		// ТСПУ
+		"le-production.tv": true,		// ТСПУ
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
