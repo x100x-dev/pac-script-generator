@@ -508,6 +508,7 @@ func main() {
 		"skip.money": true,		// Amazon
 		"rudub.pics": true,		// ТСПУ
 		"le-production.tv": true,		// ТСПУ
+		"kmplayer.com": true,		// Google Cloud
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
