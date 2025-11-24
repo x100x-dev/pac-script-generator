@@ -509,6 +509,9 @@ func main() {
 		"rudub.pics": true,		// ТСПУ
 		"le-production.tv": true,		// ТСПУ
 		"kmplayer.com": true,		// Google Cloud
+		"onfinality.io": true,		// Amazon
+		"rollapp.network": true,		// Google Cloud
+		"toramp.com": true,		// Akamai
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
