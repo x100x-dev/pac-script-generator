@@ -512,6 +512,7 @@ func main() {
 		"onfinality.io": true,		// Amazon
 		"rollapp.network": true,		// Google Cloud
 		"toramp.com": true,		// Akamai
+		"web.whatsapp.com": true,		// ТСПУ
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
