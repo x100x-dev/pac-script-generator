@@ -513,6 +513,9 @@ func main() {
 		"rollapp.network": true,		// Google Cloud
 		"toramp.com": true,		// Akamai
 		//"web.whatsapp.com": true,		// ТСПУ
+		"hdrezka-home.tv": true,		// ТСПУ
+		"propio-ls.com": true,		// Amazon
+		"elgato.com": true,		// Akamai
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
