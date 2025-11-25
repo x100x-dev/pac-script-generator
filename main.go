@@ -516,6 +516,12 @@ func main() {
 		"hdrezka-home.tv": true,		// ТСПУ
 		"propio-ls.com": true,		// Amazon
 		"elgato.com": true,		// Akamai
+		"walletconnect.org": true,		// Cloudflare
+		"binance.com": true,		// Amazon
+		"binance.click": true,		// ТСПУ
+		"nodies.app": true,		// Cloudflare
+		"nodereal.io": true,		// Amazon
+		"yshyqxx.com": true,		// ТСПУ
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
