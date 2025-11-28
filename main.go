@@ -522,6 +522,7 @@ func main() {
 		"nodies.app": true,		// Cloudflare
 		"nodereal.io": true,		// Amazon
 		"yshyqxx.com": true,		// ТСПУ
+		"envatousercontent.com": true,		// Amazon
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
