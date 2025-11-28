@@ -412,7 +412,6 @@ func main() {
 		"d1vzi28wh99zvq.cloudfront.net": true,		// images for drivethrurpg.com
 		"tinkercad.com": true,		// ТСПУ
 		"mantle.xyz": true,		// ТСПУ
-		"kopi.money": true,		// ТСПУ
 		"mito.fi": true,		// ТСПУ
 		"helixapp.com": true,		// ТСПУ
 		"staking-explorer.com": true,	// ТСПУ
