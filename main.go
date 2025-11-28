@@ -523,6 +523,9 @@ func main() {
 		"nodereal.io": true,		// Amazon
 		"yshyqxx.com": true,		// ТСПУ
 		"envatousercontent.com": true,		// Amazon
+		"ngrok.com": true,		// Amazon
+		"moonbeam.network": true,		// Amazon
+		"kopi.money": true,		// Hetzner
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
