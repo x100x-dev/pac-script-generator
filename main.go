@@ -525,6 +525,7 @@ func main() {
 		"ngrok.com": true,		// Amazon
 		"moonbeam.network": true,		// Amazon
 		"kopi.money": true,		// Hetzner
+		"anidub.shop": true,		// Scalaxy
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
