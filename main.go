@@ -526,6 +526,7 @@ func main() {
 		"moonbeam.network": true,		// Amazon
 		"kopi.money": true,		// Hetzner
 		"anidub.shop": true,		// Scalaxy
+		"stories-cdn.fun": true,		// Hetzner
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
