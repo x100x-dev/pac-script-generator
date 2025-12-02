@@ -527,6 +527,7 @@ func main() {
 		"kopi.money": true,		// Hetzner
 		"anidub.shop": true,		// Scalaxy
 		"stories-cdn.fun": true,		// Hetzner
+		"chainik.io": true,		// Hetzner
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
