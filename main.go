@@ -528,6 +528,8 @@ func main() {
 		"anidub.shop": true,		// Scalaxy
 		"stories-cdn.fun": true,		// Hetzner
 		"chainik.io": true,		// Hetzner
+		"roblox.com": true,		// Roblox
+		"rbxcdn.com": true,		// Amazon
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
