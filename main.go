@@ -530,6 +530,7 @@ func main() {
 		"chainik.io": true,		// Hetzner
 		"roblox.com": true,		// Roblox
 		"rbxcdn.com": true,		// Amazon
+		"hitmotop.com": true,		// ТСПУ
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
