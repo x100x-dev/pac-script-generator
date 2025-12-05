@@ -531,6 +531,7 @@ func main() {
 		"roblox.com": true,		// Roblox
 		"rbxcdn.com": true,		// Amazon
 		"hitmotop.com": true,		// ТСПУ
+		"snapchat.com": true,		// ТСПУ
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
