@@ -534,6 +534,8 @@ func main() {
 		"snapchat.com": true,		// ТСПУ
 		"beatstars.com": true,		// Amazon
 		"soundclick.com": true,		// Amazon
+		"morkie.xyz": true,		// Amazon
+		"bronbro.io": true,		// Hetzner
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
