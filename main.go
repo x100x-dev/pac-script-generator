@@ -537,6 +537,7 @@ func main() {
 		"soundclick.com": true,		// Amazon
 		"morkie.xyz": true,		// Amazon
 		"bronbro.io": true,		// Hetzner
+		"download.revouninstaller.com": true,		// Akamai
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
