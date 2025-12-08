@@ -400,6 +400,7 @@ func main() {
 		"musify.club": true,		// ТСПУ
 		"supercell.com": true,		// blocked in RU
 		"framer.com": true,		// blocked in RU
+		"framerstatic.com": true,		// Amazon
 		"mangapicgallery.com": true,	// ТСПУ
 		"bridgestone.com": true,	// blocked in RU
 		"bridgestonemotorcycletires.com": true,	// blocked in RU
