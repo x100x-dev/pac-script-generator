@@ -401,6 +401,9 @@ func main() {
 		"supercell.com": true,		// blocked in RU
 		"framer.com": true,		// blocked in RU
 		"framerstatic.com": true,		// Amazon
+		"framercanvas.com": true,		// Amazon
+		"framerusercontent.com": true,		// Amazon
+		"frmrspply.myshopify.com": true,	Cloudflare
 		"mangapicgallery.com": true,	// ТСПУ
 		"bridgestone.com": true,	// blocked in RU
 		"bridgestonemotorcycletires.com": true,	// blocked in RU
