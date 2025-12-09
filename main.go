@@ -403,7 +403,7 @@ func main() {
 		"framerstatic.com": true,		// Amazon
 		"framercanvas.com": true,		// Amazon
 		"framerusercontent.com": true,		// Amazon
-		"frmrspply.myshopify.com": true,	Cloudflare
+		"frmrspply.myshopify.com": true,	//Cloudflare
 		"mangapicgallery.com": true,	// ТСПУ
 		"bridgestone.com": true,	// blocked in RU
 		"bridgestonemotorcycletires.com": true,	// blocked in RU
