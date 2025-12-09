@@ -538,6 +538,7 @@ func main() {
 		"morkie.xyz": true,		// Amazon
 		"bronbro.io": true,		// Hetzner
 		"download.revouninstaller.com": true,		// Akamai
+		"kinosimka1.world": true,		// EuroHoster
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
