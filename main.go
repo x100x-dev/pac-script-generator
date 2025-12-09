@@ -539,6 +539,8 @@ func main() {
 		"bronbro.io": true,		// Hetzner
 		"download.revouninstaller.com": true,		// Akamai
 		"kinosimka1.world": true,		// EuroHoster
+		"yubsoft.com": true,		// Vultr
+		"hhdsoftware.com": true,		// Hetzner
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
