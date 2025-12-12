@@ -544,6 +544,7 @@ func main() {
 		"kinosimka1.world": true,		// EuroHoster
 		"yubsoft.com": true,		// Vultr
 		"hhdsoftware.com": true,		// Hetzner
+		"crystalidea.com": true,		// Akamai
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
