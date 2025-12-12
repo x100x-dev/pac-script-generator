@@ -545,6 +545,7 @@ func main() {
 		"yubsoft.com": true,		// Vultr
 		"hhdsoftware.com": true,		// Hetzner
 		"crystalidea.com": true,		// Akamai
+		"the-cinema.icu": true,		// Cogent
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
