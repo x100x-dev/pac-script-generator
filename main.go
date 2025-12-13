@@ -546,6 +546,14 @@ func main() {
 		"hhdsoftware.com": true,		// Hetzner
 		"crystalidea.com": true,		// Akamai
 		"the-cinema.icu": true,		// Cogent
+		"callofduty.com": true,		// Amazon
+		"callofdutymobile.com": true,		// Amazon
+		"codashop.com": true,		// Amazon
+		"codainfra.com": true,		// Amazon
+		"steamgifts.com": true,		// Amazon
+		"steamstatic.com": true,		// Amazon
+		"mobile.de": true,		// Amazon
+		"classistatic.de": true,		// Amazon
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
