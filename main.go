@@ -558,6 +558,7 @@ func main() {
 		"rottentomatoes.com": true,		// Amazon
 		"hareruyamtg.com": true,		// Amazon
 		"outfoxstories.com": true,		// DigitalOcean
+		"metabrainz.org": true,		// Hetzner
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
