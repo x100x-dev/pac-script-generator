@@ -554,6 +554,9 @@ func main() {
 		"steamstatic.com": true,		// Amazon
 		"mobile.de": true,		// Amazon
 		"classistatic.de": true,		// Amazon
+		"flixster.com": true,		// Amazon
+		"rottentomatoes.com": true,		// Amazon
+		"hareruyamtg.com": true,		// Amazon
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
