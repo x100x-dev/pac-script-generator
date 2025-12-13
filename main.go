@@ -557,6 +557,7 @@ func main() {
 		"flixster.com": true,		// Amazon
 		"rottentomatoes.com": true,		// Amazon
 		"hareruyamtg.com": true,		// Amazon
+		"outfoxstories.com": true,		// DigitalOcean
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
