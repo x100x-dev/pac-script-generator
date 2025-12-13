@@ -560,6 +560,7 @@ func main() {
 		"outfoxstories.com": true,		// DigitalOcean
 		"metabrainz.org": true,		// Hetzner
 		"fandango.com": true,		// Akamai
+		"b-cdn.net": true,		// ТСПУ
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
