@@ -562,6 +562,7 @@ func main() {
 		"metabrainz.org": true,		// Hetzner
 		"fandango.com": true,		// Akamai
 		"b-cdn.net": true,		// ТСПУ
+		"adobedtm.com": true,		// Akamai
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
