@@ -565,6 +565,7 @@ func main() {
 		"adobedtm.com": true,		// Akamai
 		"lezhin.com": true,		// Amazon
 		"bomtoon.com": true,		// Amazon
+		"balcony.studio": true,		// Amazon
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
