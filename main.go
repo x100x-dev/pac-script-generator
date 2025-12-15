@@ -566,6 +566,9 @@ func main() {
 		"lezhin.com": true,		// Amazon
 		"bomtoon.com": true,		// Amazon
 		"balcony.studio": true,		// Amazon
+		"mcomics.co.kr": true,		// Amazon
+		"iamport.kr": true,		// Amazon
+		"kakaocdn.net": true,		// Amazon
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
