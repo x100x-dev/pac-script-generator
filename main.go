@@ -570,6 +570,7 @@ func main() {
 		"iamport.kr": true,		// Amazon
 		"kakaocdn.net": true,		// Amazon
 		"sniffmouse.com": true,		// DigitalOcean
+		"thenounproject.com": true,		// Amazon
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
