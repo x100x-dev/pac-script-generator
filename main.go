@@ -569,6 +569,7 @@ func main() {
 		"mcomics.co.kr": true,		// Amazon
 		"iamport.kr": true,		// Amazon
 		"kakaocdn.net": true,		// Amazon
+		"sniffmouse.com": true,		// DigitalOcean
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
