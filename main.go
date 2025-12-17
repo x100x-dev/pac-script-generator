@@ -571,6 +571,10 @@ func main() {
 		"kakaocdn.net": true,		// Amazon
 		"sniffmouse.com": true,		// DigitalOcean
 		"thenounproject.com": true,		// Amazon
+		"gymnastics.sport": true,		// Amazon
+		"gazzetta.it": true,		// Amazon
+		"gazzettaobjects.it": true,		// Amazon
+		"cloudconvert.com": true,		// Amazon
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
