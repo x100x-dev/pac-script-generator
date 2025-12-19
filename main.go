@@ -577,6 +577,8 @@ func main() {
 		"cloudconvert.com": true,		// Amazon
 		"mtggoldfish.com": true,		// Amazon
 		"forum-cdn.infinityfree.net": true,		// Amazon
+		"trimble.com": true,		// Amazon
+		"sketchup.com": true,		// Amazon
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
