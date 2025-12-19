@@ -576,6 +576,7 @@ func main() {
 		"gazzettaobjects.it": true,		// Amazon
 		"cloudconvert.com": true,		// Amazon
 		"mtggoldfish.com": true,		// Amazon
+		"forum-cdn.infinityfree.net": true,		// Amazon
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
