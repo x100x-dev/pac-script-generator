@@ -579,6 +579,7 @@ func main() {
 		"forum-cdn.infinityfree.net": true,		// Amazon
 		"trimble.com": true,		// Amazon
 		"sketchup.com": true,		// Amazon
+		"active.ridibooks.com": true,		// Amazon
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
