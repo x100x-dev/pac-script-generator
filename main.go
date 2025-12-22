@@ -580,6 +580,7 @@ func main() {
 		"trimble.com": true,		// Amazon
 		"sketchup.com": true,		// Amazon
 		"active.ridibooks.com": true,		// Amazon
+		"milfnut.com": true,		// ТСПУ
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
