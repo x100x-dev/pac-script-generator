@@ -583,6 +583,7 @@ func main() {
 		"milfnut.com": true,		// ТСПУ
 		"onebookpublishing.org": true,		// ТСПУ
 		"e-id.cards": true,		// DigitalOcean
+		"1001tracklists.com": true,		// OVH
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
