@@ -585,6 +585,7 @@ func main() {
 		"e-id.cards": true,		// DigitalOcean
 		"1001tracklists.com": true,		// OVH
 		"teamhd.org": true,		// ТСПУ
+		"d3uas5d41jk0i3.cloudfront.net": true,		// Amazon
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
