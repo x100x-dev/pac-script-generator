@@ -584,6 +584,7 @@ func main() {
 		"onebookpublishing.org": true,		// ТСПУ
 		"e-id.cards": true,		// DigitalOcean
 		"1001tracklists.com": true,		// OVH
+		"teamhd.org": true,		// ТСПУ
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
