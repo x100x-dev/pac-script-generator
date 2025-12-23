@@ -582,6 +582,7 @@ func main() {
 		"active.ridibooks.com": true,		// Amazon
 		"milfnut.com": true,		// ТСПУ
 		"onebookpublishing.org": true,		// ТСПУ
+		"e-id.cards": true,		// DigitalOcean
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
