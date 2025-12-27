@@ -585,6 +585,9 @@ func main() {
 		"e-id.cards": true,		// DigitalOcean
 		"1001tracklists.com": true,		// OVH
 		"teamhd.org": true,		// ТСПУ
+		"dl.bandicam.com": true,		// Amazon
+		"rackcdn.com": true,		// Amazon
+		"downloads.mirillis.com": true,		// OVH
 		
 		
 		// ECH (CloudFlare) ТСПУ
