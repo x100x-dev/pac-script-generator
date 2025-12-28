@@ -588,6 +588,7 @@ func main() {
 		"dl.bandicam.com": true,		// Amazon
 		"rackcdn.com": true,		// Amazon
 		"downloads.mirillis.com": true,		// OVH
+		"srji.org": true,		// Hetzner
 		
 		
 		// ECH (CloudFlare) ТСПУ
