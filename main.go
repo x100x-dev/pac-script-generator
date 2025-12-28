@@ -590,6 +590,7 @@ func main() {
 		"mirillis.com": true,		// Amazon
 		"srji.org": true,		// Hetzner
 		"daumcdn.net": true,		// Amazon
+		"forklog.com": true,		// DigitalOcean
 		
 		
 		// ECH (CloudFlare) ТСПУ
