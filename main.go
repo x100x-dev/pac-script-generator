@@ -587,8 +587,9 @@ func main() {
 		"teamhd.org": true,		// ТСПУ
 		"dl.bandicam.com": true,		// Amazon
 		"rackcdn.com": true,		// Amazon
-		"downloads.mirillis.com": true,		// OVH
+		"mirillis.com": true,		// Amazon
 		"srji.org": true,		// Hetzner
+		"daumcdn.net": true,		// Amazon
 		
 		
 		// ECH (CloudFlare) ТСПУ
