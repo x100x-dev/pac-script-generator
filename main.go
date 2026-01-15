@@ -591,6 +591,7 @@ func main() {
 		"srji.org": true,		// Hetzner
 		"daumcdn.net": true,		// Amazon
 		"forklog.com": true,		// DigitalOcean
+		"anwap-films.com": true,		// ТСПУ
 		
 		
 		// ECH (CloudFlare) ТСПУ
