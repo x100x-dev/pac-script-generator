@@ -592,6 +592,7 @@ func main() {
 		"daumcdn.net": true,		// Amazon
 		"forklog.com": true,		// DigitalOcean
 		"anwap-films.com": true,		// ТСПУ
+		"1luxtv.net": true,		// ТСПУ
 		
 		
 		// ECH (CloudFlare) ТСПУ
