@@ -594,6 +594,7 @@ func main() {
 		"anwap-films.com": true,		// ТСПУ
 		"userbenchmark.com": true,		// OVH
 		"shikimori.one": true,		// PKH
+		"acomics.ru": true,		// Hetzner
 		
 		
 		
