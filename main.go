@@ -595,6 +595,9 @@ func main() {
 		"userbenchmark.com": true,		// OVH
 		"shikimori.one": true,		// PKH
 		"acomics.ru": true,		// Hetzner
+		"dyinglightgame.com": true,		// Amazon
+		"levelinfinite.com": true,		// Amazon
+		"techland.gg": true,		// Amazon
 		
 		
 		
