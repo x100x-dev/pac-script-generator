@@ -598,6 +598,7 @@ func main() {
 		"dyinglightgame.com": true,		// Amazon
 		"levelinfinite.com": true,		// Amazon
 		"techland.gg": true,		// Amazon
+		"foeru.innogamescdn.com": true,		// Fastly
 		
 		
 		
