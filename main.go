@@ -599,7 +599,7 @@ func main() {
 		"levelinfinite.com": true,		// Amazon
 		"techland.gg": true,		// Amazon
 		"foeru.innogamescdn.com": true,		// Fastly
-		
+		"community.pcgamingwiki.com": true,		// Hetzner
 		
 		
 		// ECH (CloudFlare) ТСПУ
