@@ -600,6 +600,7 @@ func main() {
 		"techland.gg": true,		// Amazon
 		"foeru.innogamescdn.com": true,		// Fastly
 		"community.pcgamingwiki.com": true,		// Hetzner
+		"digitaloceanspaces.com": true,		// DigitalOcean
 		
 		
 		// ECH (CloudFlare) ТСПУ
