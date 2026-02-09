@@ -601,6 +601,7 @@ func main() {
 		"foeru.innogamescdn.com": true,		// Fastly
 		"community.pcgamingwiki.com": true,		// Hetzner
 		"digitaloceanspaces.com": true,		// DigitalOcean
+		"capcut.com": true,		// blocked in RU
 		
 		
 		// ECH (CloudFlare) ТСПУ
