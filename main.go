@@ -602,6 +602,9 @@ func main() {
 		"community.pcgamingwiki.com": true,		// Hetzner
 		"digitaloceanspaces.com": true,		// DigitalOcean
 		"capcut.com": true,		// blocked in RU
+		"the-cinema.city": true,		// Scalaxy
+		"foreca.ru": true,		// Datacamp
+		"patreonusercontent.com": true,		// Cloudflare
 		
 		
 		// ECH (CloudFlare) ТСПУ
