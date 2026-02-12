@@ -606,6 +606,7 @@ func main() {
 		"foreca.ru": true,		// Datacamp
 		"patreonusercontent.com": true,		// Cloudflare
 		"mmcdn.com": true,		// Fastly
+		"filevideo1.com": true,		// OVH
 		
 		
 		// ECH (CloudFlare) ТСПУ
