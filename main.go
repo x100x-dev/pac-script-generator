@@ -605,6 +605,7 @@ func main() {
 		"the-cinema.city": true,		// Scalaxy
 		"foreca.ru": true,		// Datacamp
 		"patreonusercontent.com": true,		// Cloudflare
+		"mmcdn.com": true,		// Fastly
 		
 		
 		// ECH (CloudFlare) ТСПУ
