@@ -607,6 +607,8 @@ func main() {
 		"patreonusercontent.com": true,		// Cloudflare
 		"mmcdn.com": true,		// Fastly
 		"filevideo1.com": true,		// OVH
+		"987cdn.com": true,		// Hetzner
+		"trafficdeposit.com": true,		// Видео на сайте deutsche.video - привязка к ip сайта
 		
 		
 		// ECH (CloudFlare) ТСПУ
