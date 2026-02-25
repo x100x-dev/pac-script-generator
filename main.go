@@ -610,6 +610,7 @@ func main() {
 		"987cdn.com": true,		// Hetzner
 		"trafficdeposit.com": true,		// Видео на сайте deutsche.video - привязка к ip сайта
 		"girlswithmuscle.com": true,		// OVH
+		"sb-cd.com": true,		// DataCamp
 		
 		
 		// ECH (CloudFlare) ТСПУ
