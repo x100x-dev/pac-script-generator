@@ -611,6 +611,7 @@ func main() {
 		"trafficdeposit.com": true,		// Видео на сайте deutsche.video - привязка к ip сайта
 		"girlswithmuscle.com": true,		// OVH
 		"sb-cd.com": true,		// DataCamp
+		"forum.ru-board.com": true,		// PKH
 		
 		
 		// ECH (CloudFlare) ТСПУ
