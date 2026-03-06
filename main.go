@@ -612,6 +612,7 @@ func main() {
 		"girlswithmuscle.com": true,		// OVH
 		"sb-cd.com": true,		// DataCamp
 		"forum.ru-board.com": true,		// PKH
+		"polymarket.com": true,		// Amazon
 		
 		
 		// ECH (CloudFlare) ТСПУ
