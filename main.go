@@ -613,6 +613,7 @@ func main() {
 		"sb-cd.com": true,		// DataCamp
 		"forum.ru-board.com": true,		// PKH
 		"polymarket.com": true,		// Amazon
+		"locoloader.com": true,		// Amazon
 		
 		
 		// ECH (CloudFlare) ТСПУ
