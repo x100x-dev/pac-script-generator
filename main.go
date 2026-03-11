@@ -614,6 +614,7 @@ func main() {
 		"forum.ru-board.com": true,		// PKH
 		"polymarket.com": true,		// Amazon
 		"locoloader.com": true,		// Amazon
+		"honor.com": true,		// Akamai
 		
 		
 		// ECH (CloudFlare) ТСПУ
