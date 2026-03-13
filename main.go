@@ -616,6 +616,8 @@ func main() {
 		"locoloader.com": true,		// Amazon
 		"honor.com": true,		// Akamai
 		"shure.com": true,		// Amazon
+		"support.biamp.com": true,	// blocked in RU
+		"crestron.com": true,	// blocked in RU
 		
 		
 		// ECH (CloudFlare) ТСПУ
