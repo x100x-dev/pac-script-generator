@@ -615,6 +615,7 @@ func main() {
 		"polymarket.com": true,		// Amazon
 		"locoloader.com": true,		// Amazon
 		"honor.com": true,		// Akamai
+		"shure.com": true,		// Amazon
 		
 		
 		// ECH (CloudFlare) ТСПУ
