@@ -460,6 +460,7 @@ func main() {
 		"periodika.lv": true,	// blocked in RU
 		"digar.ee": true,	// blocked in RU
 		"telegram.org": true,		// ТСПУ
+		"t.me": true,		// ТСПУ
 		"telesco.pe": true,		// ТСПУ - static content for telegram.org
 		"ibb.co": true,		// ТСПУ
 		"simgbb.com": true,		// ТСПУ
