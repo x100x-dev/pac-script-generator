@@ -620,6 +620,7 @@ func main() {
 		"shure.com": true,		// Amazon
 		"support.biamp.com": true,	// blocked in RU
 		"crestron.com": true,	// blocked in RU
+		"rustor.org": true,		// Hostkey
 		
 		
 		// ECH (CloudFlare) ТСПУ
