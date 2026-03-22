@@ -621,6 +621,8 @@ func main() {
 		"support.biamp.com": true,	// blocked in RU
 		"crestron.com": true,	// blocked in RU
 		"rustor.org": true,		// Hostkey
+		"ghostery.com": true,		// Amazon
+		"ghostery.net": true,		// Amazon
 		
 		
 		// ECH (CloudFlare) ТСПУ
