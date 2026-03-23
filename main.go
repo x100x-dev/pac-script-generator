@@ -623,6 +623,7 @@ func main() {
 		"rustor.org": true,		// Hostkey
 		"ghostery.com": true,		// Amazon
 		"ghostery.net": true,		// Amazon
+		"last.fm": true,	// blocked in RU
 		
 		
 		// ECH (CloudFlare) ТСПУ
