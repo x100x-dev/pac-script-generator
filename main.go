@@ -624,6 +624,7 @@ func main() {
 		"ghostery.com": true,		// Amazon
 		"ghostery.net": true,		// Amazon
 		"last.fm": true,	// blocked in RU
+		"ws.audioscrobbler.com": true,	// blocked in RU - API for last.fm
 		
 		
 		// ECH (CloudFlare) ТСПУ
