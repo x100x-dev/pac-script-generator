@@ -626,6 +626,7 @@ func main() {
 		"last.fm": true,	// blocked in RU
 		"ws.audioscrobbler.com": true,	// blocked in RU - API for last.fm
 		"lizardsystems.com": true,		// Amazon
+		"threads.com": true,		// ТСПУ
 		
 		
 		// ECH (CloudFlare) ТСПУ
