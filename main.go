@@ -460,6 +460,7 @@ func main() {
 		"periodika.lv": true,	// blocked in RU
 		"digar.ee": true,	// blocked in RU
 		"telegram.org": true,		// ТСПУ
+		"telegram.me": true,		// ТСПУ
 		"t.me": true,		// ТСПУ
 		"telesco.pe": true,		// ТСПУ - static content for telegram.org
 		"ibb.co": true,		// ТСПУ
@@ -627,6 +628,7 @@ func main() {
 		"ws.audioscrobbler.com": true,	// blocked in RU - API for last.fm
 		"lizardsystems.com": true,		// Amazon
 		"threads.com": true,		// ТСПУ
+		"images-assets.nasa.gov": true,		// Amazon
 		
 		
 		// ECH (CloudFlare) ТСПУ
