@@ -629,6 +629,7 @@ func main() {
 		"lizardsystems.com": true,		// Amazon
 		"threads.com": true,		// ТСПУ
 		"images-assets.nasa.gov": true,		// Amazon
+		"dreamerscast.com": true,		// CloudFlare - not works with RESERVED_HTTPS
 		
 		
 		// ECH (CloudFlare) ТСПУ
