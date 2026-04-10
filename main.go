@@ -631,6 +631,7 @@ func main() {
 		"images-assets.nasa.gov": true,		// Amazon
 		"dreamerscast.com": true,		// CloudFlare - not works with RESERVED_HTTPS
 		"extensions.joomla.org": true,		// Amazon
+		"porn-xp.com": true,		// PKH
 		
 		
 		// ECH (CloudFlare) ТСПУ
