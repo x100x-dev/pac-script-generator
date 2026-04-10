@@ -630,6 +630,7 @@ func main() {
 		"threads.com": true,		// ТСПУ
 		"images-assets.nasa.gov": true,		// Amazon
 		"dreamerscast.com": true,		// CloudFlare - not works with RESERVED_HTTPS
+		"extensions.joomla.org": true,		// Amazon
 		
 		
 		// ECH (CloudFlare) ТСПУ
