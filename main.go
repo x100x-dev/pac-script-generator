@@ -278,7 +278,6 @@ func main() {
 		"nnm-club.ws":    true,
 		"lostfilm.tv":    true,
 		"e-hentai.org":   true,
-		"deviantart.net": true, 	// https://groups.google.com/forum/#!topic/anticensority/uXFsOS1lQ2
 		"kaztorka.org":   true, 	// https://groups.google.com/forum/#!msg/anticensority/vweNToREQ1o/3EbhCDjfAgAJ
 		"familysearch.org": true,
 		"fastproxy.online": true,
@@ -633,6 +632,8 @@ func main() {
 		"extensions.joomla.org": true,		// Amazon
 		"porn-xp.com": true,		// PKH
 		"userstyles.world": true,		// ТСПУ
+		"deviantart.net": true, 	// Amazon
+		"deviantart.com": true, 	// Amazon
 		
 		
 		// ECH (CloudFlare) ТСПУ
