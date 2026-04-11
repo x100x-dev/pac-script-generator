@@ -632,6 +632,7 @@ func main() {
 		"dreamerscast.com": true,		// CloudFlare - not works with RESERVED_HTTPS
 		"extensions.joomla.org": true,		// Amazon
 		"porn-xp.com": true,		// PKH
+		"userstyles.world": true,		// ТСПУ
 		
 		
 		// ECH (CloudFlare) ТСПУ
