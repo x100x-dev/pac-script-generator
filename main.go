@@ -633,7 +633,7 @@ func main() {
 		"porn-xp.com": true,		// PKH
 		"userstyles.world": true,		// ТСПУ
 		"deviantart.net": true, 	// Amazon
-		"deviantart.com": true, 	// Amazon
+		//"deviantart.com": true, 	// Amazon --> BLOCK ALL PROXY SERVERS
 		
 		
 		// ECH (CloudFlare) ТСПУ
