@@ -634,6 +634,7 @@ func main() {
 		"userstyles.world": true,		// ТСПУ
 		"deviantart.net": true, 	// Amazon
 		"deviantart.com": true, 	// Amazon --> работает только залогиненным пользователям
+		"wordfence.com": true,		// Amazon
 		
 		
 		// ECH (CloudFlare) ТСПУ
