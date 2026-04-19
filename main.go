@@ -636,6 +636,8 @@ func main() {
 		"deviantart.com": true, 	// Amazon --> работает только залогиненным пользователям
 		"wordfence.com": true,		// Amazon
 		"hashhedge.com": true,		// РКН
+		"doppiocdn.media": true,		// DataCamp
+		"vscdns.com": true,		// DataCamp
 		
 		
 		// ECH (CloudFlare) ТСПУ
