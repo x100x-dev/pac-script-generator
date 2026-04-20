@@ -638,6 +638,7 @@ func main() {
 		"hashhedge.com": true,		// РКН
 		"doppiocdn.media": true,		// DataCamp
 		"vscdns.com": true,		// DataCamp
+		"figma.com": true,		// Amazon
 		
 		
 		// ECH (CloudFlare) ТСПУ
