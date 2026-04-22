@@ -639,6 +639,9 @@ func main() {
 		"doppiocdn.media": true,		// DataCamp
 		"vscdns.com": true,		// DataCamp
 		"figma.com": true,		// Amazon
+		"seblod.com": true,		// OVH
+		"hikashop.com": true,		// OVH
+		"yootheme.com": true,		// DataCamp
 		
 		
 		// ECH (CloudFlare) ТСПУ
