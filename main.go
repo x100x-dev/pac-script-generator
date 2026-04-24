@@ -642,6 +642,7 @@ func main() {
 		"seblod.com": true,		// OVH
 		"hikashop.com": true,		// OVH
 		"yootheme.com": true,		// DataCamp
+		"bigcommerce.com": true,		// CloudFlare Custom
 		
 		
 		// ECH (CloudFlare) ТСПУ
