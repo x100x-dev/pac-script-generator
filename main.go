@@ -643,6 +643,7 @@ func main() {
 		"hikashop.com": true,		// OVH
 		"yootheme.com": true,		// DataCamp
 		"bigcommerce.com": true,		// CloudFlare Custom
+		"focusritegroup.com": true,		// Amazon
 		
 		
 		// ECH (CloudFlare) ТСПУ
