@@ -44,8 +44,8 @@ var blockProviders = []blockProvider{
 	//},	
 	blockProvider{
 		urls: []string{
-			//"https://svn.code.sf.net/p/zapret-info/code/dump.csv",
-			"https://antifilter.download/list/domains.lst",
+			"https://svn.code.sf.net/p/zapret-info/code/dump.csv",
+			//"https://antifilter.download/list/domains.lst",
 		},
 		rssUrl: "https://sourceforge.net/p/zapret-info/code/feed",
 	},
@@ -186,7 +186,8 @@ func main() {
 
 	// Not found hostnames
 
-	response = getOrDie("https://raw.githubusercontent.com/zapret-info/z-i/master/nxdomain.txt")
+	//response = getOrDie("https://raw.githubusercontent.com/zapret-info/z-i/master/nxdomain.txt")
+	response = getOrDie("https://raw.githubusercontent.com/bol-van/rulist/refs/heads/main/reestr_hostname.txt")
 	fmt.Println("Downloaded nxdomians.")
 
 	nxdomains := make(map[string]bool)
