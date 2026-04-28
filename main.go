@@ -187,7 +187,7 @@ func main() {
 	// Not found hostnames
 
 	//response = getOrDie("https://raw.githubusercontent.com/zapret-info/z-i/master/nxdomain.txt")
-	response = getOrDie("https://raw.githubusercontent.com/bol-van/rulist/refs/heads/main/reestr_hostname.txt")
+	response = getOrDie("https://antifilter.download/list/domains.lst")
 	fmt.Println("Downloaded nxdomians.")
 
 	nxdomains := make(map[string]bool)
