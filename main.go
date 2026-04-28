@@ -44,7 +44,8 @@ var blockProviders = []blockProvider{
 	//},	
 	blockProvider{
 		urls: []string{
-			"https://svn.code.sf.net/p/zapret-info/code/dump.csv",
+			//"https://svn.code.sf.net/p/zapret-info/code/dump.csv",
+			"https://raw.githubusercontent.com/bol-van/rulist/refs/heads/main/reestr_hostname.txt",
 		},
 		rssUrl: "https://sourceforge.net/p/zapret-info/code/feed",
 	},
