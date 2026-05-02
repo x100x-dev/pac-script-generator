@@ -646,6 +646,7 @@ func main() {
 		"yootheme.com": true,		// DataCamp
 		"bigcommerce.com": true,		// CloudFlare Custom
 		"focusritegroup.com": true,		// Amazon
+		"download.comodo.com": true,		// DataCamp
 		
 		
 		// ECH (CloudFlare) ТСПУ
