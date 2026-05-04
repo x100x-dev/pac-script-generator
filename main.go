@@ -647,6 +647,7 @@ func main() {
 		"bigcommerce.com": true,		// CloudFlare Custom
 		"focusritegroup.com": true,		// Amazon
 		"download.comodo.com": true,		// DataCamp
+		"anwap-films.site": true,		// PKH
 		
 		
 		// ECH (CloudFlare) ТСПУ
