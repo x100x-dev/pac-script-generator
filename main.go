@@ -648,6 +648,8 @@ func main() {
 		"focusritegroup.com": true,		// Amazon
 		"download.comodo.com": true,		// DataCamp
 		"anwap-films.site": true,		// PKH
+		"cdn.membrana.video": true,		// DataCamp
+		"nepchan.org": true,		// Vultr
 		
 		
 		// ECH (CloudFlare) ТСПУ
