@@ -650,6 +650,8 @@ func main() {
 		"anwap-films.site": true,		// PKH
 		"cdn.membrana.video": true,		// DataCamp
 		"nepchan.org": true,		// Vultr
+		"family-guy.mult-fan.tv": true,		// ТСПУ
+		"south-park.mult-fan.tv": true,		// ТСПУ
 		
 		
 		// ECH (CloudFlare) ТСПУ
