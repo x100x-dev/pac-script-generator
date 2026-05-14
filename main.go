@@ -652,6 +652,7 @@ func main() {
 		"nepchan.org": true,		// Vultr
 		"family-guy.mult-fan.tv": true,		// ТСПУ
 		"south-park.mult-fan.tv": true,		// ТСПУ
+		"club-romance.ru": true,		// PKH
 		
 		
 		// ECH (CloudFlare) ТСПУ
