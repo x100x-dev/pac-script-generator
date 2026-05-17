@@ -653,6 +653,7 @@ func main() {
 		"family-guy.mult-fan.tv": true,		// ТСПУ
 		"south-park.mult-fan.tv": true,		// ТСПУ
 		"club-romance.ru": true,		// PKH
+		"lordserial.my": true,		// PKH
 		
 		
 		// ECH (CloudFlare) ТСПУ
