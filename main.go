@@ -654,6 +654,8 @@ func main() {
 		"south-park.mult-fan.tv": true,		// ТСПУ
 		"club-romance.ru": true,		// PKH
 		"lordserial.my": true,		// PKH
+		"kinogo.jp": true,		// PKH
+		"kinogo.webcam": true,		// PKH
 		
 		
 		// ECH (CloudFlare) ТСПУ
