@@ -657,6 +657,7 @@ func main() {
 		"kinogo.jp": true,		// PKH
 		"kinogo.webcam": true,		// PKH
 		"explore.org": true,		// Amazon
+		"deepseek.com": true,		// Amazon
 		
 		
 		// ECH (CloudFlare) ТСПУ
