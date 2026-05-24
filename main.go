@@ -656,6 +656,7 @@ func main() {
 		"lordserial.my": true,		// PKH
 		"kinogo.jp": true,		// PKH
 		"kinogo.webcam": true,		// PKH
+		"explore.org": true,		// Amazon
 		
 		
 		// ECH (CloudFlare) ТСПУ
