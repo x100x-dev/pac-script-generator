@@ -737,6 +737,61 @@ func main() {
 	fmt.Println("Parsed csv.")
 	runtime.GC()
 
+		// Additional hostname source
+	response = getOrDie("https://raw.githubusercontent.com/bol-van/rulist/refs/heads/main/reestr_hostname_resolvable_ip4.txt")
+	fmt.Println("Downloaded additional hostname list.")
+
+	scanner = bufio.NewScanner(response.Body)
+
+	for scanner.Scan() {
+		line := strings.TrimSpace(scanner.Text())
+
+		if line == "" {
+			continue
+		}
+
+		// comments
+		if strings.HasPrefix(line, "#") {
+			continue
+		}
+
+		// split by spaces/tabs
+		fields := strings.Fields(line)
+
+		for _, field := range fields {
+
+			hostname := strings.Trim(field, " \t")
+
+			// skip ipv4
+			if net.ParseIP(hostname) != nil {
+				continue
+			}
+
+			hostname = strings.TrimPrefix(hostname, "*.")
+			hostname = strings.TrimPrefix(hostname, "www.")
+
+			hostname, err = idna.ToASCII(hostname)
+			if err != nil {
+				continue
+			}
+
+			if nxdomains[hostname] || ignoredHostnames[hostname] {
+				continue
+			}
+
+			HOSTNAMES[hostname] = true
+		}
+	}
+
+	if err := scanner.Err(); err != nil {
+		panic(err)
+	}
+
+	response.Body.Close()
+
+	fmt.Println("Parsed additional hostname list.")
+
+	
 	// Converts IP mask to 16 bit unsigned integer.
 	addrToInt := func(in []byte) int {
 
