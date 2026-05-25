@@ -657,8 +657,8 @@ func main() {
 		"kinogo.jp": true,		// PKH
 		"kinogo.webcam": true,		// PKH
 		"explore.org": true,		// Amazon
-		"deepseek.com": true,		// Amazon
-		
+		//"deepseek.com": true,		// Amazon
+		"hochu.tv": true,		// PKH
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
