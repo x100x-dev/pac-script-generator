@@ -9,7 +9,6 @@ import (
 	"io/ioutil"
 	"net/http"
 	"os"
-	"regexp"
 	"runtime"
 	"sort"
 	"strconv"
@@ -81,6 +80,10 @@ var getOrDie = func(url string) *http.Response {
 	return response
 }
 
+type GhCommit struct {
+	Message string `json:"message,omitempty"`
+	Tree    string `json:"tree,omitempty"`
+}
 
 func main() {
 
@@ -881,7 +884,6 @@ fmt.Println("Parsed additional hostname list.")
 	//defer in.Close()
 	//defer out.Close()
 
-	fmt.Fprintln(builder, "// "+newUpdateMessage)
 	fmt.Println("Rendering template...")
 	err = tmpl.ExecuteTemplate(builder, "template.js", struct{ INPUTS string }{INPUTS: string(marshalled)})
 	if err != nil {
