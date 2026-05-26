@@ -893,7 +893,9 @@ fmt.Println("Parsed additional hostname list.")
 
 fmt.Println("Calculating hash...")
 
-newHashBytes := sha256.Sum256([]byte(generatedPAC))
+hashContent := generatedPAC
+
+newHashBytes := sha256.Sum256([]byte(hashContent))
 newHash := hex.EncodeToString(newHashBytes[:])
 
 fmt.Println("Getting current PAC...")
@@ -932,7 +934,15 @@ if currentPac.Content != "" {
 		panic(err)
 	}
 
-	oldHashBytes := sha256.Sum256(oldContent)
+	oldPac := string(oldContent)
+
+lines := strings.Split(oldPac, "\n")
+
+if len(lines) > 0 && strings.HasPrefix(lines[0], "// Updated:") {
+	oldPac = strings.Join(lines[1:], "\n")
+}
+
+oldHashBytes := sha256.Sum256([]byte(oldPac))
 	oldHash = hex.EncodeToString(oldHashBytes[:])
 }
 
