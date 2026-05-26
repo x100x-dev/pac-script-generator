@@ -25,6 +25,11 @@ import (
 	"golang.org/x/net/idna"
 	"golang.org/x/text/encoding/charmap"
 	"golang.org/x/text/transform"
+
+	"crypto/sha256"
+	"encoding/base64"
+	"encoding/hex"
+	"time"
 )
 
 //var ifForced = flag.Bool("force", false, "If to ignore checking of an updated dump.csv available")
@@ -32,7 +37,6 @@ var ifForced = flag.Bool("force", true, "If to ignore checking of an updated dum
 
 type blockProvider struct {
 	urls   []string
-	rssUrl string
 }
 
 var blockProviders = []blockProvider{
@@ -45,9 +49,7 @@ var blockProviders = []blockProvider{
 	blockProvider{
 		urls: []string{
 			"https://svn.code.sf.net/p/zapret-info/code/dump.csv",
-			//"https://antifilter.download/list/domains.lst",
 		},
-		rssUrl: "https://sourceforge.net/p/zapret-info/code/feed",
 	},
 	//blockProvider {
 	//	urls: []string{
@@ -79,13 +81,6 @@ var getOrDie = func(url string) *http.Response {
 	return response
 }
 
-type GhCommit struct {
-	Message string `json:"message,omitempty"`
-	Tree    string `json:"tree,omitempty"`
-}
-type GhCommits []struct {
-	Commit GhCommit
-}
 
 func main() {
 
@@ -96,59 +91,17 @@ func main() {
 	}
 	REPO_URL := "https://api.github.com/repos/" + GH_REPO
 	var (
-		text     []byte
-		response *http.Response
-		err      error
-	)
-	HOSTNAMES := make(map[string]bool)
-	lastUpdateMessage := ""
-	flag.Parse()
-	if *ifForced == false {
+	text     []byte
+	response *http.Response
+	err      error
+)
 
-		response := getOrDie(REPO_URL + "/commits")
-		text, err = ioutil.ReadAll(response.Body)
-		if err != nil {
-			panic(err)
-		}
-		response.Body.Close()
-		commits := &GhCommits{}
-		json.Unmarshal(text, commits)
-		lastUpdateMessage = (*commits)[0].Commit.Message
-	}
-	var newUpdateMessage string
+HOSTNAMES := make(map[string]bool)
 
-	updatedRegexp := regexp.MustCompile(`Updated: \d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d [+-]0000`)
+flag.Parse()
 
-	var bestProvider *blockProvider = nil
-	for _, provider := range blockProviders {
-		response, err := get(provider.rssUrl)
-		if err != nil {
-			fmt.Println("Skipping provider because of:", err)
-			continue
-		}
-		scanner := bufio.NewScanner(response.Body)
-		for scanner.Scan() {
-			match := updatedRegexp.FindString(scanner.Text())
-			if match != "" {
-				if lastUpdateMessage < match {
-					newUpdateMessage = match
-					bestProvider = &provider
-					break
-				}
-			}
-		}
-		if err := scanner.Err(); err != nil {
-			panic(err)
-		}
-		response.Body.Close()
-		if bestProvider != nil {
-			break
-		}
-	}
-	if bestProvider == nil {
-		fmt.Println("No newer dump.csv published yet!")
-		os.Exit(0)
-	}
+bestProvider := &blockProviders[0]
+	
 	urls := bestProvider.urls
 	fmt.Println("Best provider urls are:", urls)
 
@@ -737,6 +690,63 @@ func main() {
 	fmt.Println("Parsed csv.")
 	runtime.GC()
 
+	// Additional hostname source
+
+response = getOrDie(
+	"https://raw.githubusercontent.com/bol-van/rulist/refs/heads/main/reestr_hostname_resolvable_ip4.txt",
+)
+
+fmt.Println("Downloaded additional hostname list.")
+
+scanner = bufio.NewScanner(response.Body)
+
+for scanner.Scan() {
+
+	line := strings.TrimSpace(scanner.Text())
+
+	if line == "" {
+		continue
+	}
+
+	if strings.HasPrefix(line, "#") {
+		continue
+	}
+
+	fields := strings.Fields(line)
+
+	for _, field := range fields {
+
+		hostname := strings.Trim(field, " \t")
+
+		if net.ParseIP(hostname) != nil {
+			continue
+		}
+
+		hostname = strings.TrimPrefix(hostname, "*.")
+		hostname = strings.TrimPrefix(hostname, "www.")
+
+		hostname, err = idna.ToASCII(hostname)
+
+		if err != nil {
+			continue
+		}
+
+		if nxdomains[hostname] || ignoredHostnames[hostname] {
+			continue
+		}
+
+		HOSTNAMES[hostname] = true
+	}
+}
+
+if err := scanner.Err(); err != nil {
+	panic(err)
+}
+
+response.Body.Close()
+
+fmt.Println("Parsed additional hostname list.")
+	
 		// Additional hostname source
 	response = getOrDie("https://raw.githubusercontent.com/bol-van/rulist/refs/heads/main/reestr_hostname_resolvable_ip4.txt")
 	fmt.Println("Downloaded additional hostname list.")
@@ -877,6 +887,70 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
+	generatedPAC := builder.String()
+
+fmt.Println("Calculating hash...")
+
+newHashBytes := sha256.Sum256([]byte(generatedPAC))
+newHash := hex.EncodeToString(newHashBytes[:])
+
+fmt.Println("Getting current PAC...")
+
+response = getOrDie(REPO_URL + "/contents/anticensority.pac")
+
+text, err = ioutil.ReadAll(response.Body)
+
+if err != nil {
+	panic(err)
+}
+
+response.Body.Close()
+
+currentPac := &struct {
+	Content  string `json:"content"`
+	Encoding string `json:"encoding"`
+}{}
+
+json.Unmarshal(text, currentPac)
+
+oldHash := ""
+
+if currentPac.Content != "" {
+
+	decoded := strings.ReplaceAll(currentPac.Content, "\n", "")
+
+	oldContent, err := io.ReadAll(
+		base64.NewDecoder(
+			base64.StdEncoding,
+			strings.NewReader(decoded),
+		),
+	)
+
+	if err != nil {
+		panic(err)
+	}
+
+	oldHashBytes := sha256.Sum256(oldContent)
+	oldHash = hex.EncodeToString(oldHashBytes[:])
+}
+
+if oldHash == newHash {
+
+	fmt.Println("PAC unchanged. Exiting.")
+
+	os.Exit(0)
+}
+
+newUpdateMessage := "Updated: " +
+	time.Now().UTC().Format("2006-01-02 15:04:05 -0700")
+
+builder.Reset()
+
+fmt.Fprintln(builder, "// "+newUpdateMessage)
+builder.WriteString(generatedPAC)
+
+fmt.Println("PAC changed.")
+	
 	marshalled = nil
 	values = nil
 	ipv4Map = nil
