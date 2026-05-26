@@ -520,10 +520,7 @@ func main() {
 
 	generatedPAC := builder.String()
 
-	fmt.Println("Calculating hash...")
-
-	newHashBytes := sha256.Sum256([]byte(generatedPAC))
-	newHash := hex.EncodeToString(newHashBytes[:])
+	
 
 	fmt.Println("Getting current PAC...")
 
@@ -548,31 +545,45 @@ func main() {
 
 	if currentPac.Content != "" {
 
-		decoded := strings.ReplaceAll(currentPac.Content, "\n", "")
+	decoded := strings.ReplaceAll(currentPac.Content, "\n", "")
 
-		oldContent, err := io.ReadAll(
-			base64.NewDecoder(
-				base64.StdEncoding,
-				strings.NewReader(decoded),
-			),
-		)
+	oldContent, err := io.ReadAll(
+		base64.NewDecoder(
+			base64.StdEncoding,
+			strings.NewReader(decoded),
+		),
+	)
 
-		if err != nil {
-			panic(err)
-		}
-
-		oldPac := string(oldContent)
-
-		lines := strings.Split(oldPac, "\n")
-
-		if len(lines) > 0 && strings.HasPrefix(lines[0], "// Updated:") {
-			oldPac = strings.Join(lines[1:], "\n")
-		}
-
-		oldHashBytes := sha256.Sum256([]byte(oldPac))
-		oldHash = hex.EncodeToString(oldHashBytes[:])
+	if err != nil {
+		panic(err)
 	}
 
+	oldPac := string(oldContent)
+
+	// normalize line endings
+	oldPac = strings.ReplaceAll(oldPac, "\r\n", "\n")
+	oldPac = strings.ReplaceAll(oldPac, "\r", "\n")
+
+	// remove Updated line
+	lines := strings.Split(oldPac, "\n")
+
+	if len(lines) > 0 && strings.HasPrefix(lines[0], "// Updated:") {
+		oldPac = strings.Join(lines[1:], "\n")
+	}
+
+	// normalize trailing spaces/newlines
+	oldPac = strings.TrimSpace(oldPac)
+
+	newGeneratedPac := strings.ReplaceAll(generatedPAC, "\r\n", "\n")
+	newGeneratedPac = strings.ReplaceAll(newGeneratedPac, "\r", "\n")
+	newGeneratedPac = strings.TrimSpace(newGeneratedPac)
+
+	oldHashBytes := sha256.Sum256([]byte(oldPac))
+	oldHash = hex.EncodeToString(oldHashBytes[:])
+
+	newHashBytes := sha256.Sum256([]byte(newGeneratedPac))
+	newHash = hex.EncodeToString(newHashBytes[:])
+}
 	if oldHash == newHash {
 
 		fmt.Println("PAC unchanged. Exiting.")
