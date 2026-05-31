@@ -637,6 +637,7 @@ func main() {
 		"explore.org": true,		// Amazon
 		//"deepseek.com": true,		// Amazon
 		"hochu.tv": true,		// PKH
+		"anthropic.com": true,		// ТСПУ
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
