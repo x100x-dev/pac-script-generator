@@ -638,6 +638,11 @@ func main() {
 		//"deepseek.com": true,		// Amazon
 		"hochu.tv": true,		// PKH
 		"anthropic.com": true,		// ТСПУ
+		"cloudfront.net": true,		// Amazon
+		"minicircuits.com": true,		// Amazon
+		"altium.com": true,		// Amazon
+		"nexperia.com": true,		// Amazon
+		"jae.com": true,		// Amazon
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
