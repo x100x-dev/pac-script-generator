@@ -805,8 +805,53 @@ func main() {
 
 	ipv4Map := getOptimizedMap(ipv4)
 	ipv4subnetsKeys := getSubnets(ipv4subnets)
-	hostnamesMap := getOptimizedMap(HOSTNAMES)
+	//hostnamesMap := getOptimizedMap(HOSTNAMES)
 
+	fmt.Println("Filtering redundant subdomains...")
+	filteredHostnames := make(map[string]bool)
+
+	// 1. Создаем отсортированный слайс доменов, чтобы сначала обрабатывать более короткие (родительские) домены
+	sortedDomains := make([]string, 0, len(HOSTNAMES))
+	for hostname := range HOSTNAMES {
+		sortedDomains = append(sortedDomains, hostname)
+	}
+	// Сортировка по длине и алфавиту гарантирует, что "domain.com" пойдет раньше "sub.domain.com"
+	sort.Slice(sortedDomains, func(i, j int) bool {
+		if len(sortedDomains[i]) == len(sortedDomains[j]) {
+			return sortedDomains[i] < sortedDomains[j]
+		}
+		return len(sortedDomains[i]) < len(sortedDomains[j])
+	})
+
+	// 2. Проверяем каждый домен на наличие его родителя в отфильтрованном списке
+	for _, domain := range sortedDomains {
+		parts := strings.Split(domain, ".")
+		isSubdomain := false
+
+		// Собираем родительские домены снизу вверх.
+		// Пример для a.b.domain.com: проверяет "domain.com", затем "b.domain.com"
+		for i := len(parts) - 2; i >= 0; i-- {
+			parent := strings.Join(parts[i+1:], ".")
+			if filteredHostnames[parent] {
+				isSubdomain = true
+				break
+			}
+		}
+
+		// Если родительского домена нет в списке, добавляем этот домен как основной
+		if !isSubdomain {
+			filteredHostnames[domain] = true
+		}
+	}
+
+	// Передаем отфильтрованный список в функцию оптимизации
+	hostnamesMap := getOptimizedMap(filteredHostnames)
+	
+	filteredHostnames = nil
+	sortedDomains = nil
+
+
+	
 	ipv4 = nil
 	ipv6 = nil
 	ipv4subnets = nil
