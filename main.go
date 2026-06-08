@@ -643,6 +643,7 @@ func main() {
 		"altium.com": true,		// Amazon
 		"nexperia.com": true,		// Amazon
 		"jae.com": true,		// Amazon
+		"mtproto.ru": true,		// ТСПУ
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
