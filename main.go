@@ -515,8 +515,8 @@ func main() {
 		"anidub.shop": true,		// Scalaxy
 		"stories-cdn.fun": true,		// Hetzner
 		"chainik.io": true,		// Hetzner
-		"roblox.com": true,		// Roblox
-		"rbxcdn.com": true,		// Amazon
+		//"roblox.com": true,		// Roblox
+		//"rbxcdn.com": true,		// Amazon - CDN for Roblox
 		"hitmotop.com": true,		// ТСПУ
 		"snapchat.com": true,		// ТСПУ
 		"beatstars.com": true,		// Amazon
