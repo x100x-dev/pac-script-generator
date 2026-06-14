@@ -644,6 +644,8 @@ func main() {
 		"nexperia.com": true,		// Amazon
 		"jae.com": true,		// Amazon
 		"mtproto.ru": true,		// ТСПУ
+		"cron-job.org": true,		// Amazon
+		"yahoo.com": true,		// ТСПУ
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
