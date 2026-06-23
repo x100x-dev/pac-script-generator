@@ -648,6 +648,8 @@ func main() {
 		"yahoo.com": true,		// ТСПУ
 		"stadion.io": true,		// Amazon
 		//"suno.ai": true,		// Amazon
+		"app.notion.com": true,		// blocked in RU
+		"exp.notion.com": true,		// blocked in RU
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
