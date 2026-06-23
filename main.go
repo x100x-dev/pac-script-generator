@@ -647,7 +647,7 @@ func main() {
 		"cron-job.org": true,		// Amazon
 		"yahoo.com": true,		// ТСПУ
 		"stadion.io": true,		// Amazon
-		"suno.ai": true,		// Amazon
+		//"suno.ai": true,		// Amazon
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
