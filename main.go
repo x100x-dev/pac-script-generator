@@ -646,6 +646,7 @@ func main() {
 		"mtproto.ru": true,		// ТСПУ
 		"cron-job.org": true,		// Amazon
 		"yahoo.com": true,		// ТСПУ
+		"stadion.io": true,		// Amazon
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
