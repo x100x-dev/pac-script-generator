@@ -650,6 +650,7 @@ func main() {
 		//"suno.ai": true,		// Amazon
 		"app.notion.com": true,		// blocked in RU
 		"exp.notion.com": true,		// blocked in RU
+		"hificollective.co.uk": true,		// Amazon
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
