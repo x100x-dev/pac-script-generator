@@ -652,6 +652,7 @@ func main() {
 		"exp.notion.com": true,		// blocked in RU
 		"hificollective.co.uk": true,		// Amazon
 		"winworldpc.com": true,		// OVH
+		"parts-express.com": true,		// Akamai
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
