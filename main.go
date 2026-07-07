@@ -653,6 +653,7 @@ func main() {
 		"hificollective.co.uk": true,		// Amazon
 		"winworldpc.com": true,		// OVH
 		"parts-express.com": true,		// Akamai
+		"64.media.tumblr.com": true,		// РКН
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
