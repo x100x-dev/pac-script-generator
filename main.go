@@ -654,6 +654,7 @@ func main() {
 		"winworldpc.com": true,		// OVH
 		"parts-express.com": true,		// Akamai
 		"64.media.tumblr.com": true,		// РКН
+		"i.scdn.co": true,		// Akamai --> images for spotify.com
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
