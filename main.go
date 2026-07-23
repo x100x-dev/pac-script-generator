@@ -650,11 +650,13 @@ func main() {
 		//"suno.ai": true,		// Amazon
 		"app.notion.com": true,		// blocked in RU
 		"exp.notion.com": true,		// blocked in RU
+		"file.notion.com": true,		// blocked in RU
 		"hificollective.co.uk": true,		// Amazon
 		"winworldpc.com": true,		// OVH
 		"parts-express.com": true,		// Akamai
 		"64.media.tumblr.com": true,		// РКН
 		"i.scdn.co": true,		// Akamai --> images for spotify.com
+		"qualtrics.com": true,		// blocked in RU
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
