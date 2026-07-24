@@ -618,7 +618,7 @@ func main() {
 		"hashhedge.com": true,		// РКН
 		"doppiocdn.media": true,		// DataCamp
 		"vscdns.com": true,		// DataCamp
-		"figma.com": true,		// Amazon
+		//"figma.com": true,		// Amazon
 		"seblod.com": true,		// OVH
 		"hikashop.com": true,		// OVH
 		"yootheme.com": true,		// DataCamp
