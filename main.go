@@ -657,6 +657,7 @@ func main() {
 		"64.media.tumblr.com": true,		// РКН
 		"i.scdn.co": true,		// Akamai --> images for spotify.com
 		"qualtrics.com": true,		// blocked in RU
+		"kinokong.es": true,		// ТСПУ
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
