@@ -658,6 +658,7 @@ func main() {
 		"i.scdn.co": true,		// Akamai --> images for spotify.com
 		"qualtrics.com": true,		// blocked in RU
 		"kinokong.es": true,		// ТСПУ
+		"releases.focusrite.com": true,		// Fastly
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
