@@ -659,6 +659,7 @@ func main() {
 		"qualtrics.com": true,		// blocked in RU
 		"kinokong.es": true,		// ТСПУ
 		"releases.focusrite.com": true,		// Fastly
+		"radio-browser.info": true,		// Amazon
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
