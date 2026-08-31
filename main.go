@@ -661,6 +661,7 @@ func main() {
 		"releases.focusrite.com": true,		// Fastly
 		"radio-browser.info": true,		// Amazon
 		//"chat.qwen.ai": true,		// ТСПУ
+		"docs.ultralytics.com": true,		// Amazon
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
