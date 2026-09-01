@@ -662,6 +662,7 @@ func main() {
 		"radio-browser.info": true,		// Amazon
 		//"chat.qwen.ai": true,		// ТСПУ
 		"docs.ultralytics.com": true,		// Amazon
+		"wigle.net": true,		// Amazon
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
