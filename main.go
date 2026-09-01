@@ -663,6 +663,8 @@ func main() {
 		//"chat.qwen.ai": true,		// ТСПУ
 		"docs.ultralytics.com": true,		// Amazon
 		"wigle.net": true,		// Amazon
+		"support.huawei.com": true,		// blocked in RU
+		"virustotal.com": true,		// ТСПУ
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
