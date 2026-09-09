@@ -376,7 +376,7 @@ func main() {
 		"notebooklm.google.com": true,	// blocked in RU
 		"notebooklm.google": true,	// blocked in RU
 		"bsky.app": true,		// ТСПУ
-		"bigsv.ru": true,		// ТСПУ - css/js for seasonvar.ru
+		//"bigsv.ru": true,		// ТСПУ - css/js for seasonvar.ru
 		"musify.club": true,		// ТСПУ
 		"supercell.com": true,		// blocked in RU
 		"framer.com": true,		// blocked in RU
