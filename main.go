@@ -665,6 +665,7 @@ func main() {
 		"wigle.net": true,		// Amazon
 		"support.huawei.com": true,		// blocked in RU
 		"virustotal.com": true,		// ТСПУ
+		"www.nvidia.com": true,		// blocked in RU
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
