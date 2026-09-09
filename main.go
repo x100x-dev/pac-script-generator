@@ -666,6 +666,9 @@ func main() {
 		"support.huawei.com": true,		// blocked in RU
 		"virustotal.com": true,		// ТСПУ
 		"www.nvidia.com": true,		// blocked in RU
+		"download.nvidia.com": true,		// blocked in RU
+		"forums.geforce.com": true,		// blocked in RU
+		"adblockplus.org": true,		// ТСПУ
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
