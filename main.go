@@ -667,6 +667,7 @@ func main() {
 		"virustotal.com": true,		// ТСПУ
 		"www.nvidia.com": true,		// blocked in RU
 		"download.nvidia.com": true,		// blocked in RU
+		"images.nvidia.com": true,		// blocked in RU
 		"forums.geforce.com": true,		// blocked in RU
 		"adblockplus.org": true,		// ТСПУ
 		
