@@ -670,6 +670,7 @@ func main() {
 		"images.nvidia.com": true,		// blocked in RU
 		"forums.geforce.com": true,		// blocked in RU
 		"adblockplus.org": true,		// ТСПУ
+		"pitsport.st": true,		// ТСПУ
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
