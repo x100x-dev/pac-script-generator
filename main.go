@@ -671,6 +671,7 @@ func main() {
 		"forums.geforce.com": true,		// blocked in RU
 		"adblockplus.org": true,		// ТСПУ
 		"pitsport.st": true,		// ТСПУ
+		"p11.magicplaces.eu": true,		// ТСПУ
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
