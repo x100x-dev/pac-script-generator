@@ -672,6 +672,7 @@ func main() {
 		"adblockplus.org": true,		// ТСПУ
 		"pitsport.st": true,		// ТСПУ
 		"p11.magicplaces.eu": true,		// ТСПУ
+		"flow.google.com": true,		// blocked in RU
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
