@@ -673,6 +673,8 @@ func main() {
 		"pitsport.st": true,		// ТСПУ
 		"p11.magicplaces.eu": true,		// ТСПУ
 		"flow.google.com": true,		// blocked in RU
+		"bubblerumble.net": true,		// DigitalOcean
+		"gnoswap.io": true,		// Amazon
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
