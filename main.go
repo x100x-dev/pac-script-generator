@@ -675,6 +675,8 @@ func main() {
 		"flow.google.com": true,		// blocked in RU
 		"bubblerumble.net": true,		// DigitalOcean
 		"gnoswap.io": true,		// Amazon
+		"gemini.google.com": true,		// blocked in RU
+		"geminiweb-pa.clients6.google.com": true,		// blocked in RU
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
