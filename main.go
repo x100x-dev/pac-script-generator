@@ -677,6 +677,7 @@ func main() {
 		"gnoswap.io": true,		// Amazon
 		"gemini.google.com": true,		// blocked in RU
 		"geminiweb-pa.clients6.google.com": true,		// blocked in RU
+		"web.imo.im": true,		// ТСПУ
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
