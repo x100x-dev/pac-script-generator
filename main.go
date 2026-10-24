@@ -266,6 +266,8 @@ func main() {
 		"ionos.com": true, 		// ТСПУ
 		"alphacoders.com": true,	// 451 - blocked in RU
 		"claude.ai": true,		// 451 - blocked in RU
+		"claudeusercontent.com": true,		// 451 - blocked in RU
+		"claudemcpcontent.com": true,		// 451 - blocked in RU
 		"reka.ai": true,		// 451 - blocked in RU
 		"timehd.club": true, 		// ТСПУ
 		"rebrand.ly": true, 		// ТСПУ
@@ -679,6 +681,7 @@ func main() {
 		"gemini.google.com": true,		// blocked in RU
 		"geminiweb-pa.clients6.google.com": true,		// blocked in RU
 		"web.imo.im": true,		// ТСПУ
+		"soundcompiler.com": true,		// Amazon
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
