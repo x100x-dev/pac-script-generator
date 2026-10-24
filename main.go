@@ -678,6 +678,7 @@ func main() {
 		"flow.google.com": true,		// blocked in RU
 		"bubblerumble.net": true,		// DigitalOcean
 		"gnoswap.io": true,		// Amazon
+		"notebook.google.com": true,		// blocked in RU
 		"gemini.google.com": true,		// blocked in RU
 		"geminiweb-pa.clients6.google.com": true,		// blocked in RU
 		"web.imo.im": true,		// ТСПУ
