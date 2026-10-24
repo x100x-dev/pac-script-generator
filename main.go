@@ -682,6 +682,7 @@ func main() {
 		"geminiweb-pa.clients6.google.com": true,		// blocked in RU
 		"web.imo.im": true,		// ТСПУ
 		"soundcompiler.com": true,		// Amazon
+		"segments.mottocdn.com": true,		// blocked in RU
 		
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,	
