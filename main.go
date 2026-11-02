@@ -291,6 +291,7 @@ func main() {
 		"kinoplay2.site": true,		// ТСПУ
 		"gethomebank.org": true,	// blocked in RU
 		"themoviedb.org": true,		// blocked in RU
+		"tmdb.org": true,		// ТСПУ image.tmdb.org|files.tmdb.org for themoviedb.org
 		"optimism.io": true,		// blocked in RU
 		"documentingreality.com": true,	// blocked in RU
 		"coda.io": true,		// blocked in RU
