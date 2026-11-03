@@ -705,7 +705,6 @@ func main() {
 		"soundcompiler.com":                true, // Amazon
 		"segments.mottocdn.com":            true, // blocked in RU
 		"appimage.org":                     true, // Hetzner
-		"casino.test.com":                  true, // Hetzner
 
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,
@@ -723,11 +722,6 @@ func main() {
 		"dessi.co":      true,
 	}
 
-	for hostname, ifBlocked := range customHostnames {
-		HOSTNAMES[hostname] = ifBlocked
-	}
-	customHostnames = nil
-	runtime.GC()
 	ipv4 := make(map[string]bool)
 	ipv4subnets := make(map[string]bool)
 	ipv6 := make(map[string]bool)
@@ -877,6 +871,14 @@ func main() {
 			delete(HOSTNAMES, hostname)
 		}
 	}
+
+	// Явные customHostnames добавляем после фильтрации:
+	// ручные исключения имеют приоритет над excludedKeywords.
+	for hostname, ifBlocked := range customHostnames {
+		HOSTNAMES[hostname] = ifBlocked
+	}
+	customHostnames = nil
+	runtime.GC()
 
 	fmt.Println("Filtering redundant subdomains...")
 	filteredHostnames := make(map[string]bool)
