@@ -705,6 +705,7 @@ func main() {
 		"soundcompiler.com":                true, // Amazon
 		"segments.mottocdn.com":            true, // blocked in RU
 		"appimage.org":                     true, // Hetzner
+		"casino.test.com":                  true, // Hetzner
 
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,
