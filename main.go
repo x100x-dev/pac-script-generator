@@ -254,8 +254,9 @@ func main() {
 		"putinism.wordpress.com": true,
 		"6090m01.wordpress.com":  true,
 		// Custom hosts
-		"archive.org": true,
-		"bitcoin.org": true,
+		"casino.test.com": true, // test: ручной домен должен пережить фильтры
+		"archive.org":     true,
+		"bitcoin.org":     true,
 		// LinkedIn
 		"licdn.com":    true,
 		"linkedin.com": true,
@@ -705,7 +706,6 @@ func main() {
 		"soundcompiler.com":                true, // Amazon
 		"segments.mottocdn.com":            true, // blocked in RU
 		"appimage.org":                     true, // Hetzner
-		"casino.test.com":                  true, // Hetzner
 
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,
@@ -873,12 +873,6 @@ func main() {
 		}
 	}
 
-	// Явные customHostnames добавляем после фильтрации:
-	// ручные исключения имеют приоритет над excludedKeywords.
-	for hostname, ifBlocked := range customHostnames {
-		HOSTNAMES[hostname] = ifBlocked
-	}
-	customHostnames = nil
 	runtime.GC()
 
 	fmt.Println("Filtering redundant subdomains...")
@@ -917,6 +911,14 @@ func main() {
 			filteredHostnames[domain] = true
 		}
 	}
+
+	// Ручные customHostnames добавляем ПОСЛЕ всех автоматических фильтров.
+	// Поэтому они не удаляются ни по excludedKeywords (например, "casino"),
+	// ни при удалении избыточных поддоменов.
+	for hostname, ifBlocked := range customHostnames {
+		filteredHostnames[hostname] = ifBlocked
+	}
+	customHostnames = nil
 
 	// Передаем отфильтрованный список в функцию оптимизации
 	hostnamesMap := getOptimizedMap(filteredHostnames)
