@@ -100,13 +100,13 @@ func main() {
 	// Проверяем дату обновления целевого файла reestr_hostname_resolvable_ip4.txt
 	fmt.Println("Checking updates for reestr_hostname_resolvable_ip4.txt...")
 	reqUrl := "https://api.github.com/repos/bol-van/rulist/commits?path=reestr_hostname_resolvable_ip4.txt&per_page=1"
-	
+
 	req, err := http.NewRequest("GET", reqUrl, nil)
 	if err != nil {
 		panic(err)
 	}
 	req.Header.Set("Authorization", "Bearer "+GH_TOKEN)
-	
+
 	resp, err := http.DefaultClient.Do(req)
 	if err != nil {
 		panic(err)
@@ -114,7 +114,7 @@ func main() {
 	if resp.StatusCode != http.StatusOK {
 		panic(fmt.Sprintf("Failed to get file commits: %s", resp.Status))
 	}
-	
+
 	text, err = ioutil.ReadAll(resp.Body)
 	resp.Body.Close()
 	if err != nil {
@@ -146,24 +146,24 @@ func main() {
 	fmt.Println("Downloaded ingoredhosts.")
 
 	ignoredHostnames := map[string]bool{
-		"ynet.co.il":                                         true,
-		"www.ynet.co.il":                                     true,
-		"rutrk.org":                                          true,
-		"pornhub.com":                                        true,
-		"www.pornhub.com":                                    true,
-		"rt.pornhub.com":                                     true,
-		"ru.pornhub.com":                                     true,
-		"ytimg.com":                                          true,
-		"i.ytimg.com":                                        true,
-		"tiktok.com":                                         true,
-		"ggpht.com":                                          true,
-		"akamaihd.net":                                       true,
-		"youtube.com":                                        true,
-		"www.youtube.com":                                    true,
-		"googlevideo.com":                                    true,
-		".googlevideo.com":                                   true,
-		"prostovpn.org":                                      true,
-		"antizapret.prostovpn.org":                           true,
+		"ynet.co.il":               true,
+		"www.ynet.co.il":           true,
+		"rutrk.org":                true,
+		"pornhub.com":              true,
+		"www.pornhub.com":          true,
+		"rt.pornhub.com":           true,
+		"ru.pornhub.com":           true,
+		"ytimg.com":                true,
+		"i.ytimg.com":              true,
+		"tiktok.com":               true,
+		"ggpht.com":                true,
+		"akamaihd.net":             true,
+		"youtube.com":              true,
+		"www.youtube.com":          true,
+		"googlevideo.com":          true,
+		".googlevideo.com":         true,
+		"prostovpn.org":            true,
+		"antizapret.prostovpn.org": true,
 	}
 	scanner := bufio.NewScanner(response.Body)
 	for scanner.Scan() {
@@ -171,6 +171,26 @@ func main() {
 	}
 	response.Body.Close()
 	fmt.Println("Parsed ingoredhosts.txt.")
+
+	// Исключать домены, содержащие любое из этих ключевых слов.
+	excludedKeywords := []string{
+		"casino",
+	}
+
+	// Общая проверка: точные исключения из ignoredHostnames и ключевые слова.
+	isIgnoredHostname := func(hostname string) bool {
+		hostname = strings.ToLower(hostname)
+		if ignoredHostnames[hostname] {
+			return true
+		}
+		for _, keyword := range excludedKeywords {
+			keyword = strings.ToLower(strings.TrimSpace(keyword))
+			if keyword != "" && strings.Contains(hostname, keyword) {
+				return true
+			}
+		}
+		return false
+	}
 
 	// Несуществующие домены
 	response = getOrDie("https://raw.githubusercontent.com/zapret-info/z-i/master/nxdomain.txt")
@@ -211,7 +231,7 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	
+
 	csvIn := bufio.NewReader(response.Body)
 	fmt.Println("Downloaded csv.")
 
@@ -224,7 +244,7 @@ func main() {
 	reader.Comma = ';'
 	reader.FieldsPerRecord = -1
 	idnaAnalyse := idna.New()
-	
+
 	customHostnames := map[string]bool{
 		// TSPU-extra
 		"ua": true, // Whole *.ua.
@@ -240,467 +260,467 @@ func main() {
 		"licdn.com":    true,
 		"linkedin.com": true,
 		// Based on users complaints:
-		"koshara.net":     true,
-		"koshara.co":      true,
-		"new-team.org":    true,
-		"fast-torrent.ru": true,
-		"pornreactor.cc":  true,
-		"vn.reactor.cc":   true,
-		"vatnik.reactor.cc":   true,
-		"nnm-club.name":   true,
-		"rutor.info":      true,
-		"free-rutor.org":  true,
-		"doramacine.in":  true,
+		"koshara.net":       true,
+		"koshara.co":        true,
+		"new-team.org":      true,
+		"fast-torrent.ru":   true,
+		"pornreactor.cc":    true,
+		"vn.reactor.cc":     true,
+		"vatnik.reactor.cc": true,
+		"nnm-club.name":     true,
+		"rutor.info":        true,
+		"free-rutor.org":    true,
+		"doramacine.in":     true,
 		// Rutracker complaints:
 		"static.t-ru.org": true,
-		
 
-		"nnm-club.ws":    true,
-		"lostfilm.tv":    true,
-		"e-hentai.org":   true,
-		"kaztorka.org":   true, 	// https://groups.google.com/forum/#!msg/anticensority/vweNToREQ1o/3EbhCDjfAgAJ
-		"familysearch.org": true,
-		"fastproxy.online": true,
-		"dlinkddns.com": true, 		// 451 - blocked in RU
-		"padlet.com": true, 		// ТСПУ
-		"ionos.com": true, 		// ТСПУ
-		"alphacoders.com": true,	// 451 - blocked in RU
-		"claude.ai": true,		// 451 - blocked in RU
-		"claudeusercontent.com": true,		// 451 - blocked in RU
-		"claudemcpcontent.com": true,		// 451 - blocked in RU
-		"reka.ai": true,		// 451 - blocked in RU
-		"timehd.club": true, 		// ТСПУ
-		"rebrand.ly": true, 		// ТСПУ
-		"skycdp.com": true,		// 403 - blocked in RU
-		"wildstat.com": true,		// blocked in RU
-		"tria.ge": true, 		// blocked in RU
-		"rulate.ru": true,		// content blocked in RU
-		"fanficus.com": true, 		// ТСПУ
-		"fanficus-server-mirror-879c30cd977f.herokuapp.com": true,		// domain checks GEO for site fanficus.com
-		"apollo.farm": true,		// blocked in RU
-		"station.money": true,		// blocked in RU
-		"skip.build": true,		// content blocked in RU
-		"iar.com": true,		// content blocked in RU
-		"st.com": true,			// content blocked in RU
-		"howlongtobeat.com": true,	// blocked in RU
-		"lingq.com": true, 		// ТСПУ
-		"thealphacentauri.net": true, 	// ТСПУ
-		"notion.so": true,		// content blocked in RU
-		"clickup.com": true,		// content blocked in RU
-		"recraft.ai": true,		// content blocked in RU
-		"kinoplay2.site": true,		// ТСПУ
-		"gethomebank.org": true,	// blocked in RU
-		"themoviedb.org": true,		// blocked in RU
-		"tmdb.org": true,		// ТСПУ image.tmdb.org|files.tmdb.org for themoviedb.org
-		"optimism.io": true,		// blocked in RU
-		"documentingreality.com": true,	// blocked in RU
-		"coda.io": true,		// blocked in RU
-		"puffer.fi": true,		// blocked in RU
-		"kamino.finance": true,		// content blocked in RU
-		"debridge.foundation": true,	// blocked in RU
-		"zora.co": true,		// blocked in RU
-		"govgen.io": true,		// blocked in RU
-		"saga.xyz": true,		// blocked in RU
-		"grassfoundation.io": true,	// content blocked in RU
-		"getgrass.io": true,		// check ip for grassfoundation.io
+		"nnm-club.ws":           true,
+		"lostfilm.tv":           true,
+		"e-hentai.org":          true,
+		"kaztorka.org":          true, // https://groups.google.com/forum/#!msg/anticensority/vweNToREQ1o/3EbhCDjfAgAJ
+		"familysearch.org":      true,
+		"fastproxy.online":      true,
+		"dlinkddns.com":         true, // 451 - blocked in RU
+		"padlet.com":            true, // ТСПУ
+		"ionos.com":             true, // ТСПУ
+		"alphacoders.com":       true, // 451 - blocked in RU
+		"claude.ai":             true, // 451 - blocked in RU
+		"claudeusercontent.com": true, // 451 - blocked in RU
+		"claudemcpcontent.com":  true, // 451 - blocked in RU
+		"reka.ai":               true, // 451 - blocked in RU
+		"timehd.club":           true, // ТСПУ
+		"rebrand.ly":            true, // ТСПУ
+		"skycdp.com":            true, // 403 - blocked in RU
+		"wildstat.com":          true, // blocked in RU
+		"tria.ge":               true, // blocked in RU
+		"rulate.ru":             true, // content blocked in RU
+		"fanficus.com":          true, // ТСПУ
+		"fanficus-server-mirror-879c30cd977f.herokuapp.com": true, // domain checks GEO for site fanficus.com
+		"apollo.farm":            true, // blocked in RU
+		"station.money":          true, // blocked in RU
+		"skip.build":             true, // content blocked in RU
+		"iar.com":                true, // content blocked in RU
+		"st.com":                 true, // content blocked in RU
+		"howlongtobeat.com":      true, // blocked in RU
+		"lingq.com":              true, // ТСПУ
+		"thealphacentauri.net":   true, // ТСПУ
+		"notion.so":              true, // content blocked in RU
+		"clickup.com":            true, // content blocked in RU
+		"recraft.ai":             true, // content blocked in RU
+		"kinoplay2.site":         true, // ТСПУ
+		"gethomebank.org":        true, // blocked in RU
+		"themoviedb.org":         true, // blocked in RU
+		"tmdb.org":               true, // ТСПУ image.tmdb.org|files.tmdb.org for themoviedb.org
+		"optimism.io":            true, // blocked in RU
+		"documentingreality.com": true, // blocked in RU
+		"coda.io":                true, // blocked in RU
+		"puffer.fi":              true, // blocked in RU
+		"kamino.finance":         true, // content blocked in RU
+		"debridge.foundation":    true, // blocked in RU
+		"zora.co":                true, // blocked in RU
+		"govgen.io":              true, // blocked in RU
+		"saga.xyz":               true, // blocked in RU
+		"grassfoundation.io":     true, // content blocked in RU
+		"getgrass.io":            true, // check ip for grassfoundation.io
 		//"forum.ru-board.com": true,	// blocked in RU
-		"orbit-games.com": true,	// blocked in RU
-		"hetzner.com": true,		// ТСПУ
-		"audiobookbay.lu": true,	// ТСПУ
-		"humblebundle.com": true,	// blocked in RU
-		"capacitorjs.com": true,	// blocked in RU
-		"blur.io": true,		// blocked in RU
-		"notepad-plus-plus.org": true,	// blocked in RU
-		"viber.com": true,		// ТСПУ
-		"forums.mydigitallife.net": true,	// ТСПУ
-		"nsaneforums.com": true,	// ТСПУ
-		"investsocial.com": true,	// ТСПУ
-		"elevenlabs.io": true,		// blocked in RU
-		"sora.com": true,		// blocked in RU
-		"whoer.net": true,		// blocked in RU
-		"c3pool.com": true,		// ТСПУ
-		"devexpress.com": true,		// blocked in RU
-		"meta.ai": true,		// blocked in RU
-		"portal.lisk.com": true,	// blocked in RU
-		"superbridge.app": true,	// blocked in RU
-		"app.milkyway.zone": true,	// blocked in RU
-		"app.nept.finance": true,	// blocked in RU
-		"quasar.fi": true,		// blocked in RU
-		"levana.finance": true,		// blocked in RU
-		"aistudio.google.com": true,	// blocked in RU
-		"ai.google.dev": true,		// blocked in RU
-		"alkalimakersuite-pa.clients6.google.com": true,		// domain checks GEO for site aistudio.google.com
+		"orbit-games.com":          true, // blocked in RU
+		"hetzner.com":              true, // ТСПУ
+		"audiobookbay.lu":          true, // ТСПУ
+		"humblebundle.com":         true, // blocked in RU
+		"capacitorjs.com":          true, // blocked in RU
+		"blur.io":                  true, // blocked in RU
+		"notepad-plus-plus.org":    true, // blocked in RU
+		"viber.com":                true, // ТСПУ
+		"forums.mydigitallife.net": true, // ТСПУ
+		"nsaneforums.com":          true, // ТСПУ
+		"investsocial.com":         true, // ТСПУ
+		"elevenlabs.io":            true, // blocked in RU
+		"sora.com":                 true, // blocked in RU
+		"whoer.net":                true, // blocked in RU
+		"c3pool.com":               true, // ТСПУ
+		"devexpress.com":           true, // blocked in RU
+		"meta.ai":                  true, // blocked in RU
+		"portal.lisk.com":          true, // blocked in RU
+		"superbridge.app":          true, // blocked in RU
+		"app.milkyway.zone":        true, // blocked in RU
+		"app.nept.finance":         true, // blocked in RU
+		"quasar.fi":                true, // blocked in RU
+		"levana.finance":           true, // blocked in RU
+		"aistudio.google.com":      true, // blocked in RU
+		"ai.google.dev":            true, // blocked in RU
+		"alkalimakersuite-pa.clients6.google.com": true, // domain checks GEO for site aistudio.google.com
 		//"waa-pa.clients6.google.com": true,		// domain checks GEO for site aistudio.google.com
-		"horizen.io": true,		// blocked in RU
-		"autogeriko.com": true,		// blocked in RU
-		"w.wormhole.com": true,		// blocked in RU
-		"curseforge.com": true,		// 403 - blocked in RU
-		"weights.gg": true,		// 403 - blocked in RU
-		"weights.com": true,		// 403 - blocked in RU
-		"pump.fun": true,		// 403 - blocked in RU
-		"indiakino.org": true,		// ТСПУ
-		"tapecontent.net": true,	// 403 - blocked in RU
-		"grok.com": true,		// blocked in RU
-		"x.ai": true,			// blocked in RU
-		"truthsocial.com": true,	// 403 - blocked in RU
-		"spacex.com": true,		// content blocked in RU
-		"libgen.st": true,		// host in Ukraine
-		"libgen.rs": true,		// host in Ukraine
-		"books.ms": true,		// host in Ukraine
-		"myfonts.com": true,		// 403 - blocked in RU
-		"terra.money": true,		// blocked in RU
-		"dojo.trading": true,		// blocked in RU
-		"astroport.fi": true,		// blocked in RU
-		"assets.teinon.net": true,	// blocked in RU
-		"pixwox.com": true,		// blocked in RU
-		"pixnoy.com": true,		// blocked in RU
-		"mantra.zone": true,		// blocked in RU
-		"mynearwallet.com": true,	// blocked in RU
-		"btdig.com": true,		// blocked in RU
-		"readymag.com": true,		// blocked in RU
-		"mintchain.io": true,		// blocked in RU
-		"sndcdn.com": true,		// ТСПУ
-		"arras.io": true,		// ТСПУ
-		"nexusmods.com": true,		// ТСПУ
-		"nexus-cdn.com": true,		// ТСПУ
-		"faz.net": true,		// ТСПУ
-		"spiegel.de": true,		// ТСПУ
-		"free-barcode-generator.net": true,	// blocked in RU
-		"xhcdn.com": true,		// ТСПУ
-		"xvideos-cdn.com": true,	// ТСПУ
-		"hoerzu.de": true,		// ТСПУ
-		"dnb.com": true,		// blocked in RU
-		"shop.gameloft.com": true,	// blocked in RU
-		"creality.com": true,		// ТСПУ
-		"imgxclub.com": true,		// ТСПУ
-		"ti.com": true,			// ТСПУ
-		"manus.im": true,		// blocked in RU
-		"manuscdn.com": true,		// Amazon
-		"notebooklm.google.com": true,	// blocked in RU
-		"notebooklm.google": true,	// blocked in RU
-		"bsky.app": true,		// ТСПУ
+		"horizen.io":                 true, // blocked in RU
+		"autogeriko.com":             true, // blocked in RU
+		"w.wormhole.com":             true, // blocked in RU
+		"curseforge.com":             true, // 403 - blocked in RU
+		"weights.gg":                 true, // 403 - blocked in RU
+		"weights.com":                true, // 403 - blocked in RU
+		"pump.fun":                   true, // 403 - blocked in RU
+		"indiakino.org":              true, // ТСПУ
+		"tapecontent.net":            true, // 403 - blocked in RU
+		"grok.com":                   true, // blocked in RU
+		"x.ai":                       true, // blocked in RU
+		"truthsocial.com":            true, // 403 - blocked in RU
+		"spacex.com":                 true, // content blocked in RU
+		"libgen.st":                  true, // host in Ukraine
+		"libgen.rs":                  true, // host in Ukraine
+		"books.ms":                   true, // host in Ukraine
+		"myfonts.com":                true, // 403 - blocked in RU
+		"terra.money":                true, // blocked in RU
+		"dojo.trading":               true, // blocked in RU
+		"astroport.fi":               true, // blocked in RU
+		"assets.teinon.net":          true, // blocked in RU
+		"pixwox.com":                 true, // blocked in RU
+		"pixnoy.com":                 true, // blocked in RU
+		"mantra.zone":                true, // blocked in RU
+		"mynearwallet.com":           true, // blocked in RU
+		"btdig.com":                  true, // blocked in RU
+		"readymag.com":               true, // blocked in RU
+		"mintchain.io":               true, // blocked in RU
+		"sndcdn.com":                 true, // ТСПУ
+		"arras.io":                   true, // ТСПУ
+		"nexusmods.com":              true, // ТСПУ
+		"nexus-cdn.com":              true, // ТСПУ
+		"faz.net":                    true, // ТСПУ
+		"spiegel.de":                 true, // ТСПУ
+		"free-barcode-generator.net": true, // blocked in RU
+		"xhcdn.com":                  true, // ТСПУ
+		"xvideos-cdn.com":            true, // ТСПУ
+		"hoerzu.de":                  true, // ТСПУ
+		"dnb.com":                    true, // blocked in RU
+		"shop.gameloft.com":          true, // blocked in RU
+		"creality.com":               true, // ТСПУ
+		"imgxclub.com":               true, // ТСПУ
+		"ti.com":                     true, // ТСПУ
+		"manus.im":                   true, // blocked in RU
+		"manuscdn.com":               true, // Amazon
+		"notebooklm.google.com":      true, // blocked in RU
+		"notebooklm.google":          true, // blocked in RU
+		"bsky.app":                   true, // ТСПУ
 		//"bigsv.ru": true,		// ТСПУ - css/js for seasonvar.ru
-		"musify.club": true,		// ТСПУ
-		"supercell.com": true,		// blocked in RU
-		"framer.com": true,		// blocked in RU
-		"framerstatic.com": true,		// Amazon
-		"framercanvas.com": true,		// Amazon
-		"framerusercontent.com": true,		// Amazon
-		"frmrspply.myshopify.com": true,	//Cloudflare
-		"mangapicgallery.com": true,	// ТСПУ
-		"bridgestone.com": true,	// blocked in RU
-		"bridgestonemotorcycletires.com": true,	// blocked in RU
-		"flourish.studio": true,	// blocked in RU
-		"laratranslate.com": true,	// ТСПУ
-		"miro.com": true,		// ТСПУ
-		"kicker.de": true,		// blocked in RU
-		"bundesliga.com": true,		// ТСПУ
-		"nba.com": true,		// blocked in RU
-		"d1vzi28wh99zvq.cloudfront.net": true,		// images for drivethrurpg.com
-		"tinkercad.com": true,		// ТСПУ
-		"mantle.xyz": true,		// ТСПУ
-		"mito.fi": true,		// ТСПУ
-		"helixapp.com": true,		// ТСПУ
-		"staking-explorer.com": true,	// ТСПУ
-		"deepl.com": true,		// blocked in RU
-		"highwebmedia.com": true,	// wss for chaturbate.com
-		"autodesk.com": true,		// blocked in RU
-		"milanote.com": true,		// ТСПУ
-		"motor1.com": true,		// blocked in RU
-		"newgrounds.com": true,		// ТСПУ
-		"lookerstudio.google.com": true,	// blocked in RU
-		"infineon.com": true,		// blocked in RU
-		"linguee.de": true,		// blocked in RU
-		"geonames.org": true,		// ТСПУ
-		"runrepeat.com": true,		// ТСПУ
-		"lichess.org": true,		// ТСПУ
-		"00v.in": true,			// ТСПУ
-		"mw5.community": true,		// blocked in RU
-		"bourns.com": true,		// blocked in RU
-		"te.com": true,			// blocked in RU
-		"digikeyassets.com": true,	// ТСПУ
-		"microsemi.com": true,		// blocked in RU
-		"latticesemi.com": true,	// blocked in RU
-		"imdb.com": true,		// ТСПУ
-		"hatchcanvas.com": true,	// blocked in RU
-		"mo.co": true,			// blocked in RU
-		"pximg.net": true,		// ТСПУ
-		"githubcopilot.com": true,	// blocked in RU
-		"godaddy.com": true,		// ТСПУ
-		"tablbrowser.com": true,	// blocked in RU
-		"kemono.cr": true,	// blocked in RU
-		"ariscommunity.com": true,	// blocked downloads in RU
-		"studiostaticassetsprod.azureedge.net": true,		// ТСПУ - static content for copilot.microsoft.com
-		"pandasecurity.com": true,	// blocked in RU
-		"bang-olufsen.com": true,	// blocked in RU
-		"coomer.st": true,	// blocked in RU
-		"gadgetversus.com": true,	// blocked in RU
-		"itch.io": true,		// ТСПУ
-		"unsplash.com": true,		// ТСПУ
-		"montpellier.fr": true,	// blocked in RU
-		"xerox.com": true,	// blocked in RU
-		"periodika.lv": true,	// blocked in RU
-		"digar.ee": true,	// blocked in RU
-		"telegram.org": true,		// ТСПУ
-		"telegram.me": true,		// ТСПУ
-		"t.me": true,		// ТСПУ
-		"telesco.pe": true,		// ТСПУ - static content for telegram.org
-		"ibb.co": true,		// ТСПУ
-		"simgbb.com": true,		// ТСПУ
-		"metalarea.org": true,		// ТСПУ
-		"soquest.xyz": true,		// ТСПУ
-		"oraidex.io": true,		// ТСПУ
-		"mega.nz": true,		// ТСПУ
-		"mega.co.nz": true,		// ТСПУ
-		"mega.io": true,		// ТСПУ
-		"spriters-resource.com": true,		// ТСПУ
-		"parisaeroport.fr": true,	// blocked in RU
-		"tuta.io": true,		// ТСПУ
-		"tuta.com": true,		// ТСПУ
-		"mf.life": true,		// ТСПУ
-		"archdaily.com": true,		// ТСПУ
-		"fracturae.com": true,		// ТСПУ
-		"upload.ee": true,		// ТСПУ
-		"umputun.com": true,		// ТСПУ
-		"convertio.co": true,		// ТСПУ
-		"mtgtop8.com": true,		// ТСПУ
-		"fastpic.org": true,		// ТСПУ
-		"metapix.net": true,		// ТСПУ
-		"roland.com": true,		// ТСПУ
-		"musicstore.com": true,		// ТСПУ
-		"losslessclub.com": true,		// ТСПУ
-		"mtgpics.com": true,		// ТСПУ
-		"tesall.club": true,		// Hetzner
-		"kernel.org": true,		// ТСПУ
-		"runwayml.com": true,		// Amazon
-		"cellmapper.net": true,		// OVH
-		"club-nikon.ru": true,		// Hetzner
-		"images.musicstore.de": true,		// Akamai
-		"merkl.xyz": true,		// ТСПУ
-		"steinberg.net": true,		// Amazon
-		"allcinema.net": true,		// Contabo
-		"d-addicts.com": true,		// OVH
-		"puzzlegarage.com": true,		// Hetzner
-		"mui.com": true,		// Amazon
-		"nordkeyboards.com": true,		// Cloudflare
-		"hp.com": true,		// Amazon
-		"askastrologer.org": true,		// Hetzner
-		"kinokong.li": true,		// РКН
-		"furtails.pw": true,		// DigitalOcean
-		"sograph.xyz": true,		// Amazon
-		"walletlink.org": true,		// Cloudflare
-		"sportsnet.ca": true,		// Akamai
-		"tsn.ca": true,		// Akamai
-		"720pier.ru": true,		// Crea Nova
-		"espn.com": true,		// Amazon
-		"cosmos-apis.com": true,		// Cloudflare
-		"skip.money": true,		// Amazon
-		"rudub.pics": true,		// ТСПУ
-		"le-production.tv": true,		// ТСПУ
-		"kmplayer.com": true,		// Google Cloud
-		"onfinality.io": true,		// Amazon
-		"rollapp.network": true,		// Google Cloud
-		"toramp.com": true,		// Akamai
+		"musify.club":                          true, // ТСПУ
+		"supercell.com":                        true, // blocked in RU
+		"framer.com":                           true, // blocked in RU
+		"framerstatic.com":                     true, // Amazon
+		"framercanvas.com":                     true, // Amazon
+		"framerusercontent.com":                true, // Amazon
+		"frmrspply.myshopify.com":              true, //Cloudflare
+		"mangapicgallery.com":                  true, // ТСПУ
+		"bridgestone.com":                      true, // blocked in RU
+		"bridgestonemotorcycletires.com":       true, // blocked in RU
+		"flourish.studio":                      true, // blocked in RU
+		"laratranslate.com":                    true, // ТСПУ
+		"miro.com":                             true, // ТСПУ
+		"kicker.de":                            true, // blocked in RU
+		"bundesliga.com":                       true, // ТСПУ
+		"nba.com":                              true, // blocked in RU
+		"d1vzi28wh99zvq.cloudfront.net":        true, // images for drivethrurpg.com
+		"tinkercad.com":                        true, // ТСПУ
+		"mantle.xyz":                           true, // ТСПУ
+		"mito.fi":                              true, // ТСПУ
+		"helixapp.com":                         true, // ТСПУ
+		"staking-explorer.com":                 true, // ТСПУ
+		"deepl.com":                            true, // blocked in RU
+		"highwebmedia.com":                     true, // wss for chaturbate.com
+		"autodesk.com":                         true, // blocked in RU
+		"milanote.com":                         true, // ТСПУ
+		"motor1.com":                           true, // blocked in RU
+		"newgrounds.com":                       true, // ТСПУ
+		"lookerstudio.google.com":              true, // blocked in RU
+		"infineon.com":                         true, // blocked in RU
+		"linguee.de":                           true, // blocked in RU
+		"geonames.org":                         true, // ТСПУ
+		"runrepeat.com":                        true, // ТСПУ
+		"lichess.org":                          true, // ТСПУ
+		"00v.in":                               true, // ТСПУ
+		"mw5.community":                        true, // blocked in RU
+		"bourns.com":                           true, // blocked in RU
+		"te.com":                               true, // blocked in RU
+		"digikeyassets.com":                    true, // ТСПУ
+		"microsemi.com":                        true, // blocked in RU
+		"latticesemi.com":                      true, // blocked in RU
+		"imdb.com":                             true, // ТСПУ
+		"hatchcanvas.com":                      true, // blocked in RU
+		"mo.co":                                true, // blocked in RU
+		"pximg.net":                            true, // ТСПУ
+		"githubcopilot.com":                    true, // blocked in RU
+		"godaddy.com":                          true, // ТСПУ
+		"tablbrowser.com":                      true, // blocked in RU
+		"kemono.cr":                            true, // blocked in RU
+		"ariscommunity.com":                    true, // blocked downloads in RU
+		"studiostaticassetsprod.azureedge.net": true, // ТСПУ - static content for copilot.microsoft.com
+		"pandasecurity.com":                    true, // blocked in RU
+		"bang-olufsen.com":                     true, // blocked in RU
+		"coomer.st":                            true, // blocked in RU
+		"gadgetversus.com":                     true, // blocked in RU
+		"itch.io":                              true, // ТСПУ
+		"unsplash.com":                         true, // ТСПУ
+		"montpellier.fr":                       true, // blocked in RU
+		"xerox.com":                            true, // blocked in RU
+		"periodika.lv":                         true, // blocked in RU
+		"digar.ee":                             true, // blocked in RU
+		"telegram.org":                         true, // ТСПУ
+		"telegram.me":                          true, // ТСПУ
+		"t.me":                                 true, // ТСПУ
+		"telesco.pe":                           true, // ТСПУ - static content for telegram.org
+		"ibb.co":                               true, // ТСПУ
+		"simgbb.com":                           true, // ТСПУ
+		"metalarea.org":                        true, // ТСПУ
+		"soquest.xyz":                          true, // ТСПУ
+		"oraidex.io":                           true, // ТСПУ
+		"mega.nz":                              true, // ТСПУ
+		"mega.co.nz":                           true, // ТСПУ
+		"mega.io":                              true, // ТСПУ
+		"spriters-resource.com":                true, // ТСПУ
+		"parisaeroport.fr":                     true, // blocked in RU
+		"tuta.io":                              true, // ТСПУ
+		"tuta.com":                             true, // ТСПУ
+		"mf.life":                              true, // ТСПУ
+		"archdaily.com":                        true, // ТСПУ
+		"fracturae.com":                        true, // ТСПУ
+		"upload.ee":                            true, // ТСПУ
+		"umputun.com":                          true, // ТСПУ
+		"convertio.co":                         true, // ТСПУ
+		"mtgtop8.com":                          true, // ТСПУ
+		"fastpic.org":                          true, // ТСПУ
+		"metapix.net":                          true, // ТСПУ
+		"roland.com":                           true, // ТСПУ
+		"musicstore.com":                       true, // ТСПУ
+		"losslessclub.com":                     true, // ТСПУ
+		"mtgpics.com":                          true, // ТСПУ
+		"tesall.club":                          true, // Hetzner
+		"kernel.org":                           true, // ТСПУ
+		"runwayml.com":                         true, // Amazon
+		"cellmapper.net":                       true, // OVH
+		"club-nikon.ru":                        true, // Hetzner
+		"images.musicstore.de":                 true, // Akamai
+		"merkl.xyz":                            true, // ТСПУ
+		"steinberg.net":                        true, // Amazon
+		"allcinema.net":                        true, // Contabo
+		"d-addicts.com":                        true, // OVH
+		"puzzlegarage.com":                     true, // Hetzner
+		"mui.com":                              true, // Amazon
+		"nordkeyboards.com":                    true, // Cloudflare
+		"hp.com":                               true, // Amazon
+		"askastrologer.org":                    true, // Hetzner
+		"kinokong.li":                          true, // РКН
+		"furtails.pw":                          true, // DigitalOcean
+		"sograph.xyz":                          true, // Amazon
+		"walletlink.org":                       true, // Cloudflare
+		"sportsnet.ca":                         true, // Akamai
+		"tsn.ca":                               true, // Akamai
+		"720pier.ru":                           true, // Crea Nova
+		"espn.com":                             true, // Amazon
+		"cosmos-apis.com":                      true, // Cloudflare
+		"skip.money":                           true, // Amazon
+		"rudub.pics":                           true, // ТСПУ
+		"le-production.tv":                     true, // ТСПУ
+		"kmplayer.com":                         true, // Google Cloud
+		"onfinality.io":                        true, // Amazon
+		"rollapp.network":                      true, // Google Cloud
+		"toramp.com":                           true, // Akamai
 		//"web.whatsapp.com": true,		// ТСПУ
-		"hdrezka-home.tv": true,		// ТСПУ
-		"propio-ls.com": true,		// Amazon
-		"elgato.com": true,		// Akamai
-		"walletconnect.org": true,		// Cloudflare
-		"binance.com": true,		// Amazon
-		"binance.click": true,		// ТСПУ
-		"nodies.app": true,		// Cloudflare
-		"nodereal.io": true,		// Amazon
-		"yshyqxx.com": true,		// ТСПУ
-		"envatousercontent.com": true,		// Amazon
-		"ngrok.com": true,		// Amazon
-		"moonbeam.network": true,		// Amazon
-		"kopi.money": true,		// Hetzner
-		"anidub.shop": true,		// Scalaxy
-		"stories-cdn.fun": true,		// Hetzner
-		"chainik.io": true,		// Hetzner
+		"hdrezka-home.tv":       true, // ТСПУ
+		"propio-ls.com":         true, // Amazon
+		"elgato.com":            true, // Akamai
+		"walletconnect.org":     true, // Cloudflare
+		"binance.com":           true, // Amazon
+		"binance.click":         true, // ТСПУ
+		"nodies.app":            true, // Cloudflare
+		"nodereal.io":           true, // Amazon
+		"yshyqxx.com":           true, // ТСПУ
+		"envatousercontent.com": true, // Amazon
+		"ngrok.com":             true, // Amazon
+		"moonbeam.network":      true, // Amazon
+		"kopi.money":            true, // Hetzner
+		"anidub.shop":           true, // Scalaxy
+		"stories-cdn.fun":       true, // Hetzner
+		"chainik.io":            true, // Hetzner
 		//"roblox.com": true,		// Roblox
 		//"rbxcdn.com": true,		// Amazon - CDN for Roblox
-		"hitmotop.com": true,		// ТСПУ
-		"snapchat.com": true,		// ТСПУ
-		"beatstars.com": true,		// Amazon
-		"soundclick.com": true,		// Amazon
-		"morkie.xyz": true,		// Amazon
-		"bronbro.io": true,		// Hetzner
-		"download.revouninstaller.com": true,		// Akamai
-		"kinosimka1.world": true,		// EuroHoster
-		"yubsoft.com": true,		// Vultr
-		"hhdsoftware.com": true,		// Hetzner
-		"crystalidea.com": true,		// Akamai
-		"the-cinema.icu": true,		// Cogent
-		"callofduty.com": true,		// Amazon
-		"callofdutymobile.com": true,		// Amazon
-		"codashop.com": true,		// Amazon
-		"codainfra.com": true,		// Amazon
-		"steamgifts.com": true,		// Amazon
-		"steamstatic.com": true,		// Amazon
-		"mobile.de": true,		// Amazon
-		"classistatic.de": true,		// Amazon
-		"flixster.com": true,		// Amazon
-		"rottentomatoes.com": true,		// Amazon
-		"hareruyamtg.com": true,		// Amazon
-		"outfoxstories.com": true,		// DigitalOcean
-		"metabrainz.org": true,		// Hetzner
-		"fandango.com": true,		// Akamai
-		"b-cdn.net": true,		// ТСПУ
-		"adobedtm.com": true,		// Akamai
-		"lezhin.com": true,		// Amazon
-		"bomtoon.com": true,		// Amazon
-		"balcony.studio": true,		// Amazon
-		"mcomics.co.kr": true,		// Amazon
-		"iamport.kr": true,		// Amazon
-		"kakaocdn.net": true,		// Amazon
-		"sniffmouse.com": true,		// DigitalOcean
-		"thenounproject.com": true,		// Amazon
-		"gymnastics.sport": true,		// Amazon
-		"gazzetta.it": true,		// Amazon
-		"gazzettaobjects.it": true,		// Amazon
-		"cloudconvert.com": true,		// Amazon
-		"mtggoldfish.com": true,		// Amazon
-		"forum-cdn.infinityfree.net": true,		// Amazon
-		"trimble.com": true,		// Amazon
-		"sketchup.com": true,		// Amazon
-		"active.ridibooks.com": true,		// Amazon
-		"milfnut.com": true,		// ТСПУ
-		"onebookpublishing.org": true,		// ТСПУ
-		"e-id.cards": true,		// DigitalOcean
-		"1001tracklists.com": true,		// OVH
-		"teamhd.org": true,		// ТСПУ
-		"dl.bandicam.com": true,		// Amazon
-		"rackcdn.com": true,		// Amazon
-		"mirillis.com": true,		// Amazon
-		"srji.org": true,		// Hetzner
-		"daumcdn.net": true,		// Amazon
-		"forklog.com": true,		// DigitalOcean
-		"anwap-films.com": true,		// ТСПУ
-		"userbenchmark.com": true,		// OVH
-		"shikimori.one": true,		// PKH
-		"acomics.ru": true,		// Hetzner
-		"dyinglightgame.com": true,		// Amazon
-		"levelinfinite.com": true,		// Amazon
-		"techland.gg": true,		// Amazon
-		"foeru.innogamescdn.com": true,		// Fastly
-		"community.pcgamingwiki.com": true,		// Hetzner
-		"digitaloceanspaces.com": true,		// DigitalOcean
-		"capcut.com": true,		// blocked in RU
-		"the-cinema.city": true,		// Scalaxy
-		"foreca.ru": true,		// Datacamp
-		"patreonusercontent.com": true,		// Cloudflare
-		"mmcdn.com": true,		// Fastly
-		"filevideo1.com": true,		// OVH
-		"987cdn.com": true,		// Hetzner
-		"trafficdeposit.com": true,		// Видео на сайте deutsche.video - привязка к ip сайта
-		"girlswithmuscle.com": true,		// OVH
-		"sb-cd.com": true,		// DataCamp
-		"forum.ru-board.com": true,		// PKH
-		"polymarket.com": true,		// Amazon
-		"locoloader.com": true,		// Amazon
-		"honor.com": true,		// Akamai
-		"shure.com": true,		// Amazon
-		"support.biamp.com": true,	// blocked in RU
-		"crestron.com": true,	// blocked in RU
-		"rustor.org": true,		// Hostkey
-		"ghostery.com": true,		// Amazon
-		"ghostery.net": true,		// Amazon
-		"last.fm": true,	// blocked in RU
-		"ws.audioscrobbler.com": true,	// blocked in RU - API for last.fm
-		"lizardsystems.com": true,		// Amazon
-		"threads.com": true,		// ТСПУ
-		"images-assets.nasa.gov": true,		// Amazon
-		"dreamerscast.com": true,		// CloudFlare - not works with RESERVED_HTTPS
-		"extensions.joomla.org": true,		// Amazon
-		"porn-xp.com": true,		// PKH
-		"userstyles.world": true,		// ТСПУ
-		"deviantart.net": true, 	// Amazon
-		"deviantart.com": true, 	// Amazon --> работает только залогиненным пользователям
-		"wordfence.com": true,		// Amazon
-		"hashhedge.com": true,		// РКН
-		"doppiocdn.media": true,		// DataCamp
-		"vscdns.com": true,		// DataCamp
+		"hitmotop.com":                 true, // ТСПУ
+		"snapchat.com":                 true, // ТСПУ
+		"beatstars.com":                true, // Amazon
+		"soundclick.com":               true, // Amazon
+		"morkie.xyz":                   true, // Amazon
+		"bronbro.io":                   true, // Hetzner
+		"download.revouninstaller.com": true, // Akamai
+		"kinosimka1.world":             true, // EuroHoster
+		"yubsoft.com":                  true, // Vultr
+		"hhdsoftware.com":              true, // Hetzner
+		"crystalidea.com":              true, // Akamai
+		"the-cinema.icu":               true, // Cogent
+		"callofduty.com":               true, // Amazon
+		"callofdutymobile.com":         true, // Amazon
+		"codashop.com":                 true, // Amazon
+		"codainfra.com":                true, // Amazon
+		"steamgifts.com":               true, // Amazon
+		"steamstatic.com":              true, // Amazon
+		"mobile.de":                    true, // Amazon
+		"classistatic.de":              true, // Amazon
+		"flixster.com":                 true, // Amazon
+		"rottentomatoes.com":           true, // Amazon
+		"hareruyamtg.com":              true, // Amazon
+		"outfoxstories.com":            true, // DigitalOcean
+		"metabrainz.org":               true, // Hetzner
+		"fandango.com":                 true, // Akamai
+		"b-cdn.net":                    true, // ТСПУ
+		"adobedtm.com":                 true, // Akamai
+		"lezhin.com":                   true, // Amazon
+		"bomtoon.com":                  true, // Amazon
+		"balcony.studio":               true, // Amazon
+		"mcomics.co.kr":                true, // Amazon
+		"iamport.kr":                   true, // Amazon
+		"kakaocdn.net":                 true, // Amazon
+		"sniffmouse.com":               true, // DigitalOcean
+		"thenounproject.com":           true, // Amazon
+		"gymnastics.sport":             true, // Amazon
+		"gazzetta.it":                  true, // Amazon
+		"gazzettaobjects.it":           true, // Amazon
+		"cloudconvert.com":             true, // Amazon
+		"mtggoldfish.com":              true, // Amazon
+		"forum-cdn.infinityfree.net":   true, // Amazon
+		"trimble.com":                  true, // Amazon
+		"sketchup.com":                 true, // Amazon
+		"active.ridibooks.com":         true, // Amazon
+		"milfnut.com":                  true, // ТСПУ
+		"onebookpublishing.org":        true, // ТСПУ
+		"e-id.cards":                   true, // DigitalOcean
+		"1001tracklists.com":           true, // OVH
+		"teamhd.org":                   true, // ТСПУ
+		"dl.bandicam.com":              true, // Amazon
+		"rackcdn.com":                  true, // Amazon
+		"mirillis.com":                 true, // Amazon
+		"srji.org":                     true, // Hetzner
+		"daumcdn.net":                  true, // Amazon
+		"forklog.com":                  true, // DigitalOcean
+		"anwap-films.com":              true, // ТСПУ
+		"userbenchmark.com":            true, // OVH
+		"shikimori.one":                true, // PKH
+		"acomics.ru":                   true, // Hetzner
+		"dyinglightgame.com":           true, // Amazon
+		"levelinfinite.com":            true, // Amazon
+		"techland.gg":                  true, // Amazon
+		"foeru.innogamescdn.com":       true, // Fastly
+		"community.pcgamingwiki.com":   true, // Hetzner
+		"digitaloceanspaces.com":       true, // DigitalOcean
+		"capcut.com":                   true, // blocked in RU
+		"the-cinema.city":              true, // Scalaxy
+		"foreca.ru":                    true, // Datacamp
+		"patreonusercontent.com":       true, // Cloudflare
+		"mmcdn.com":                    true, // Fastly
+		"filevideo1.com":               true, // OVH
+		"987cdn.com":                   true, // Hetzner
+		"trafficdeposit.com":           true, // Видео на сайте deutsche.video - привязка к ip сайта
+		"girlswithmuscle.com":          true, // OVH
+		"sb-cd.com":                    true, // DataCamp
+		"forum.ru-board.com":           true, // PKH
+		"polymarket.com":               true, // Amazon
+		"locoloader.com":               true, // Amazon
+		"honor.com":                    true, // Akamai
+		"shure.com":                    true, // Amazon
+		"support.biamp.com":            true, // blocked in RU
+		"crestron.com":                 true, // blocked in RU
+		"rustor.org":                   true, // Hostkey
+		"ghostery.com":                 true, // Amazon
+		"ghostery.net":                 true, // Amazon
+		"last.fm":                      true, // blocked in RU
+		"ws.audioscrobbler.com":        true, // blocked in RU - API for last.fm
+		"lizardsystems.com":            true, // Amazon
+		"threads.com":                  true, // ТСПУ
+		"images-assets.nasa.gov":       true, // Amazon
+		"dreamerscast.com":             true, // CloudFlare - not works with RESERVED_HTTPS
+		"extensions.joomla.org":        true, // Amazon
+		"porn-xp.com":                  true, // PKH
+		"userstyles.world":             true, // ТСПУ
+		"deviantart.net":               true, // Amazon
+		"deviantart.com":               true, // Amazon --> работает только залогиненным пользователям
+		"wordfence.com":                true, // Amazon
+		"hashhedge.com":                true, // РКН
+		"doppiocdn.media":              true, // DataCamp
+		"vscdns.com":                   true, // DataCamp
 		//"figma.com": true,		// Amazon
-		"seblod.com": true,		// OVH
-		"hikashop.com": true,		// OVH
-		"yootheme.com": true,		// DataCamp
-		"bigcommerce.com": true,		// CloudFlare Custom
-		"focusritegroup.com": true,		// Amazon
-		"download.comodo.com": true,		// DataCamp
-		"anwap-films.site": true,		// PKH
-		"cdn.membrana.video": true,		// DataCamp
-		"nepchan.org": true,		// Vultr
-		"family-guy.mult-fan.tv": true,		// ТСПУ
-		"south-park.mult-fan.tv": true,		// ТСПУ
-		"club-romance.ru": true,		// PKH
-		"lordserial.my": true,		// PKH
-		"kinogo.jp": true,		// PKH
-		"kinogo.webcam": true,		// PKH
-		"explore.org": true,		// Amazon
+		"seblod.com":             true, // OVH
+		"hikashop.com":           true, // OVH
+		"yootheme.com":           true, // DataCamp
+		"bigcommerce.com":        true, // CloudFlare Custom
+		"focusritegroup.com":     true, // Amazon
+		"download.comodo.com":    true, // DataCamp
+		"anwap-films.site":       true, // PKH
+		"cdn.membrana.video":     true, // DataCamp
+		"nepchan.org":            true, // Vultr
+		"family-guy.mult-fan.tv": true, // ТСПУ
+		"south-park.mult-fan.tv": true, // ТСПУ
+		"club-romance.ru":        true, // PKH
+		"lordserial.my":          true, // PKH
+		"kinogo.jp":              true, // PKH
+		"kinogo.webcam":          true, // PKH
+		"explore.org":            true, // Amazon
 		//"deepseek.com": true,		// Amazon
-		"hochu.tv": true,		// PKH
-		"anthropic.com": true,		// ТСПУ
-		"cloudfront.net": true,		// Amazon
-		"minicircuits.com": true,		// Amazon
-		"altium.com": true,		// Amazon
-		"nexperia.com": true,		// Amazon
-		"jae.com": true,		// Amazon
-		"mtproto.ru": true,		// ТСПУ
-		"cron-job.org": true,		// Amazon
-		"yahoo.com": true,		// ТСПУ
-		"stadion.io": true,		// Amazon
+		"hochu.tv":         true, // PKH
+		"anthropic.com":    true, // ТСПУ
+		"cloudfront.net":   true, // Amazon
+		"minicircuits.com": true, // Amazon
+		"altium.com":       true, // Amazon
+		"nexperia.com":     true, // Amazon
+		"jae.com":          true, // Amazon
+		"mtproto.ru":       true, // ТСПУ
+		"cron-job.org":     true, // Amazon
+		"yahoo.com":        true, // ТСПУ
+		"stadion.io":       true, // Amazon
 		//"suno.ai": true,		// Amazon
-		"app.notion.com": true,		// blocked in RU
-		"exp.notion.com": true,		// blocked in RU
-		"file.notion.com": true,		// blocked in RU
-		"hificollective.co.uk": true,		// Amazon
-		"winworldpc.com": true,		// OVH
-		"parts-express.com": true,		// Akamai
-		"64.media.tumblr.com": true,		// РКН
-		"i.scdn.co": true,		// Akamai --> images for spotify.com
-		"qualtrics.com": true,		// blocked in RU
-		"kinokong.es": true,		// ТСПУ
-		"releases.focusrite.com": true,		// Fastly
-		"radio-browser.info": true,		// Amazon
+		"app.notion.com":         true, // blocked in RU
+		"exp.notion.com":         true, // blocked in RU
+		"file.notion.com":        true, // blocked in RU
+		"hificollective.co.uk":   true, // Amazon
+		"winworldpc.com":         true, // OVH
+		"parts-express.com":      true, // Akamai
+		"64.media.tumblr.com":    true, // РКН
+		"i.scdn.co":              true, // Akamai --> images for spotify.com
+		"qualtrics.com":          true, // blocked in RU
+		"kinokong.es":            true, // ТСПУ
+		"releases.focusrite.com": true, // Fastly
+		"radio-browser.info":     true, // Amazon
 		//"chat.qwen.ai": true,		// ТСПУ
-		"docs.ultralytics.com": true,		// Amazon
-		"wigle.net": true,		// Amazon
-		"support.huawei.com": true,		// blocked in RU
-		"virustotal.com": true,		// ТСПУ
-		"www.nvidia.com": true,		// blocked in RU
-		"download.nvidia.com": true,		// blocked in RU
-		"images.nvidia.com": true,		// blocked in RU
-		"api-forums.nvidia.com": true,		// blocked in RU
-		"forums.geforce.com": true,		// blocked in RU
-		"adblockplus.org": true,		// ТСПУ
-		"pitsport.st": true,		// ТСПУ
-		"p11.magicplaces.eu": true,		// ТСПУ
-		"flow.google.com": true,		// blocked in RU
-		"bubblerumble.net": true,		// DigitalOcean
-		"gnoswap.io": true,		// Amazon
-		"notebook.google.com": true,		// blocked in RU
-		"gemini.google.com": true,		// blocked in RU
-		"geminiweb-pa.clients6.google.com": true,		// blocked in RU
-		"web.imo.im": true,		// ТСПУ
-		"soundcompiler.com": true,		// Amazon
-		"segments.mottocdn.com": true,		// blocked in RU
-		"appimage.org": true,		// Hetzner
-		
+		"docs.ultralytics.com":             true, // Amazon
+		"wigle.net":                        true, // Amazon
+		"support.huawei.com":               true, // blocked in RU
+		"virustotal.com":                   true, // ТСПУ
+		"www.nvidia.com":                   true, // blocked in RU
+		"download.nvidia.com":              true, // blocked in RU
+		"images.nvidia.com":                true, // blocked in RU
+		"api-forums.nvidia.com":            true, // blocked in RU
+		"forums.geforce.com":               true, // blocked in RU
+		"adblockplus.org":                  true, // ТСПУ
+		"pitsport.st":                      true, // ТСПУ
+		"p11.magicplaces.eu":               true, // ТСПУ
+		"flow.google.com":                  true, // blocked in RU
+		"bubblerumble.net":                 true, // DigitalOcean
+		"gnoswap.io":                       true, // Amazon
+		"notebook.google.com":              true, // blocked in RU
+		"gemini.google.com":                true, // blocked in RU
+		"geminiweb-pa.clients6.google.com": true, // blocked in RU
+		"web.imo.im":                       true, // ТСПУ
+		"soundcompiler.com":                true, // Amazon
+		"segments.mottocdn.com":            true, // blocked in RU
+		"appimage.org":                     true, // Hetzner
+		"casino.test.com":                  true, // Hetzner
+
 		// ECH (CloudFlare) ТСПУ
-		"icy-veins.com": true,	
-		"steamdb.info": true,
-		"bnbfree.in": true,
+		"icy-veins.com": true,
+		"steamdb.info":  true,
+		"bnbfree.in":    true,
 		//"surasoft.ru": true,
-		"nnmstatic.win": true,
-		"torrnado.space": true,
+		"nnmstatic.win":           true,
+		"torrnado.space":          true,
 		"xn--80aizddian.xn--p1ai": true,
-		"emcd.io": true,
-		"languagelearning.site": true,
+		"emcd.io":                 true,
+		"languagelearning.site":   true,
 		//"joyreactor.cc": true,
-		"lostfilm.top": true,
+		"lostfilm.top":  true,
 		"insearch.site": true,
-		"dessi.co": true,
+		"dessi.co":      true,
 	}
 
 	for hostname, ifBlocked := range customHostnames {
@@ -732,7 +752,7 @@ func main() {
 				if strings.HasPrefix(hostname, "*.") {
 					hostname = hostname[2:]
 				}
-				if nxdomains[hostname] || ignoredHostnames[hostname] {
+				if nxdomains[hostname] || isIgnoredHostname(hostname) {
 					continue
 				}
 				if strings.HasPrefix(hostname, "www.") {
@@ -791,7 +811,7 @@ func main() {
 				continue
 			}
 
-			if nxdomains[hostname] || ignoredHostnames[hostname] {
+			if nxdomains[hostname] || isIgnoredHostname(hostname) {
 				continue
 			}
 
@@ -850,6 +870,14 @@ func main() {
 	ipv4subnetsKeys := getSubnets(ipv4subnets)
 	//hostnamesMap := getOptimizedMap(HOSTNAMES)
 
+	// Финальная проверка всех источников, включая TSPU и customHostnames.
+	fmt.Println("Filtering ignored hostnames...")
+	for hostname := range HOSTNAMES {
+		if isIgnoredHostname(hostname) {
+			delete(HOSTNAMES, hostname)
+		}
+	}
+
 	fmt.Println("Filtering redundant subdomains...")
 	filteredHostnames := make(map[string]bool)
 
@@ -889,12 +917,10 @@ func main() {
 
 	// Передаем отфильтрованный список в функцию оптимизации
 	hostnamesMap := getOptimizedMap(filteredHostnames)
-	
+
 	filteredHostnames = nil
 	sortedDomains = nil
 
-
-	
 	ipv4 = nil
 	ipv6 = nil
 	ipv4subnets = nil
