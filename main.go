@@ -175,6 +175,39 @@ func main() {
 	// Исключать домены, содержащие любое из этих ключевых слов.
 	excludedKeywords := []string{
 		"casino",
+		"azino",
+		"cazino",
+		"cazin0",
+		"cazina",
+		"kazino",
+		"kasino",
+		"casyno",
+		"admiralx",
+		"melbet",
+		"mostbet",
+		"pokerdom",
+		"riobet",
+		"vavada",
+		"vulkan",
+		"vulcan",
+		"wulcan",
+		"1xbet",
+		"1xlite",
+		"bitzamo",
+		"fairspin",
+		"leonbets",
+		"cryptoboss",
+		"dragonmoney",
+		"drgnmoney",
+		"goldfishka",
+		"play-fortuna",
+		"playfortuna",
+		"fortuna-amp",
+		"1xslots",
+		"crystalslot",
+		"leon-zerkalo",
+		"champion-slots",
+		"championslots",
 	}
 
 	// Общая проверка: точные исключения из ignoredHostnames и ключевые слова.
@@ -254,7 +287,6 @@ func main() {
 		"putinism.wordpress.com": true,
 		"6090m01.wordpress.com":  true,
 		// Custom hosts
-		"casino.test.com": true, // test: ручной домен должен пережить фильтры
 		"archive.org":     true,
 		"bitcoin.org":     true,
 		// LinkedIn
@@ -706,6 +738,7 @@ func main() {
 		"soundcompiler.com":                true, // Amazon
 		"segments.mottocdn.com":            true, // blocked in RU
 		"appimage.org":                     true, // Hetzner
+		"songsterr.com":                	true, // Amazon
 
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,
