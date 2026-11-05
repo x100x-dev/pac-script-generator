@@ -739,6 +739,7 @@ func main() {
 		"segments.mottocdn.com":            true, // blocked in RU
 		"appimage.org":                     true, // Hetzner
 		"songsterr.com":                	true, // Amazon
+		"pocketcasts.com":                	true, // Amazon
 
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,
