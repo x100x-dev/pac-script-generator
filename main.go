@@ -740,6 +740,7 @@ func main() {
 		"appimage.org":                     true, // Hetzner
 		"songsterr.com":                	true, // Amazon
 		"pocketcasts.com":                	true, // Amazon
+		"jazzgroove.org":                	true, // Amazon
 
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,
