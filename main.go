@@ -741,6 +741,8 @@ func main() {
 		"songsterr.com":                	true, // Amazon
 		"pocketcasts.com":                	true, // Amazon
 		"jazzgroove.org":                	true, // Amazon
+		"toperme.com":                      true, // ТСПУ
+		"utorr.cc":                      	true, // ТСПУ
 
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,
