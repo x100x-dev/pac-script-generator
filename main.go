@@ -188,6 +188,7 @@ func main() {
 		"pokerdom",
 		"riobet",
 		"vavada",
+		"volcano",
 		"vulkan",
 		"vulcan",
 		"wulcan",
@@ -743,6 +744,7 @@ func main() {
 		"jazzgroove.org":                	true, // Amazon
 		"toperme.com":                      true, // ТСПУ
 		"utorr.cc":                      	true, // ТСПУ
+		"altera.com":          				true, // blocked in RU
 
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,
