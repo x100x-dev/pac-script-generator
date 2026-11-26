@@ -194,6 +194,7 @@ func main() {
 		"vulcan",
 		"wulcan",
 		"1xbet",
+		"1-xbet",
 		"1xlite",
 		"bitzamo",
 		"fairspin",
@@ -206,10 +207,16 @@ func main() {
 		"playfortuna",
 		"fortuna-amp",
 		"1xslots",
+		"1-xslot",
 		"crystalslot",
 		"leon-zerkalo",
 		"champion-slots",
 		"championslots",
+		"lordfilm0",
+		"medcentr",
+		"betsbc",
+		"1-win",
+		"100gramm",
 	}
 
 	// Общая проверка: точные исключения из ignoredHostnames и ключевые слова.
