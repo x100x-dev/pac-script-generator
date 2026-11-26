@@ -72,8 +72,6 @@ func main() {
 		panic("Provide GH_REPO and GH_TOKEN environment variables!")
 	}
 	REPO_URL := "https://api.github.com/repos/" + GH_REPO
-	sourcePath := "data/resolved_domains.txt"
-
 	var (
 		text     []byte
 		response *http.Response
@@ -99,9 +97,10 @@ func main() {
 
 	var newUpdateMessage string
 
-	// Проверяем дату обновления целевого файла в нашем репозитории
-	fmt.Printf("Checking updates for %s...\n", sourcePath)
-	reqUrl := fmt.Sprintf("https://api.github.com/repos/%s/commits?path=%s&per_page=1", GH_REPO, sourcePath)
+	// Проверяем дату обновления целевого файла reestr_hostname_resolvable_ip4.txt
+	fmt.Println("Checking updates for reestr_hostname_resolvable_ip4.txt...")
+	//reqUrl := "https://api.github.com/repos/bol-van/rulist/commits?path=reestr_hostname_resolvable_ip4.txt&per_page=1"
+	reqUrl := "https://api.github.com/repos/x100x-dev/antifilter-resolver/data/commits?path=resolved_domains.txt&per_page=1"
 
 	req, err := http.NewRequest("GET", reqUrl, nil)
 	if err != nil {
@@ -129,7 +128,7 @@ func main() {
 	}
 
 	if len(*fileCommits) == 0 {
-		panic(fmt.Sprintf("No commits found for %s", sourcePath))
+		panic("No commits found for reestr_hostname_resolvable_ip4.txt")
 	}
 
 	// Формируем метку времени обновления
@@ -137,7 +136,7 @@ func main() {
 
 	if *ifForced == false {
 		if lastUpdateMessage >= newUpdateMessage {
-			fmt.Printf("No newer %s published yet!\n", sourcePath)
+			fmt.Println("No newer reestr_hostname_resolvable_ip4.txt published yet!")
 			os.Exit(0)
 		}
 	}
@@ -741,12 +740,12 @@ func main() {
 		"soundcompiler.com":                true, // Amazon
 		"segments.mottocdn.com":            true, // blocked in RU
 		"appimage.org":                     true, // Hetzner
-		"songsterr.com":                    true, // Amazon
-		"pocketcasts.com":                  true, // Amazon
-		"jazzgroove.org":                   true, // Amazon
+		"songsterr.com":                	true, // Amazon
+		"pocketcasts.com":                	true, // Amazon
+		"jazzgroove.org":                	true, // Amazon
 		"toperme.com":                      true, // ТСПУ
-		"utorr.cc":                         true, // ТСПУ
-		"altera.com":                       true, // blocked in RU
+		"utorr.cc":                      	true, // ТСПУ
+		"altera.com":          				true, // blocked in RU
 
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,
@@ -821,9 +820,9 @@ func main() {
 	fmt.Println("Parsed csv.")
 	runtime.GC()
 
-	// Дополнительный источник хостов из нашего репозитория
-	rawUrl := fmt.Sprintf("https://raw.githubusercontent.com/%s/refs/heads/main/%s", GH_REPO, sourcePath)
-	response = getOrDie(rawUrl)
+	// Дополнительный источник хостов (reestr_hostname_resolvable_ip4.txt)
+	//response = getOrDie("https://raw.githubusercontent.com/bol-van/rulist/refs/heads/main/reestr_hostname_resolvable_ip4.txt")
+	response = getOrDie("https://raw.githubusercontent.com/x100x-dev/antifilter-resolver/refs/heads/main/data/resolved_domains.txt")
 	fmt.Println("Downloaded additional hostname list.")
 
 	scanner = bufio.NewScanner(response.Body)
