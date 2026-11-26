@@ -100,7 +100,7 @@ func main() {
 	// Проверяем дату обновления целевого файла reestr_hostname_resolvable_ip4.txt
 	fmt.Println("Checking updates for reestr_hostname_resolvable_ip4.txt...")
 	//reqUrl := "https://api.github.com/repos/bol-van/rulist/commits?path=reestr_hostname_resolvable_ip4.txt&per_page=1"
-	reqUrl := "https://api.github.com/repos/x100x-dev/antifilter-resolver/data/commits?path=resolved_domains.txt&per_page=1"
+	reqUrl := "https://api.github.com/repos/x100x-dev/antifilter-resolver/commits?path=data/resolved_domains.txt&per_page=1"
 
 	req, err := http.NewRequest("GET", reqUrl, nil)
 	if err != nil {
