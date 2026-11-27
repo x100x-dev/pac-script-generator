@@ -217,6 +217,12 @@ func main() {
 		"betsbc",
 		"1-win",
 		"100gramm",
+		"101-diplom",
+		"12-let-rabstva",
+		"13-klinicheskaja",
+		"reklama",
+		"ramenbet",
+		"dragonmoney",
 	}
 
 	// Общая проверка: точные исключения из ignoredHostnames и ключевые слова.
