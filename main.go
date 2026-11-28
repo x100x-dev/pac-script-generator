@@ -4,11 +4,9 @@ import (
 	"bufio"
 	"bytes"
 	"encoding/binary"
-	"encoding/csv"
 	"encoding/json"
 	"flag"
 	"fmt"
-	"io"
 	"io/ioutil"
 	"net"
 	"net/http"
@@ -20,8 +18,6 @@ import (
 	"text/template"
 
 	"golang.org/x/net/idna"
-	"golang.org/x/text/encoding/charmap"
-	"golang.org/x/text/transform"
 )
 
 // Измените на false, если хотите, чтобы проверка обновлений работала по умолчанию
@@ -272,26 +268,6 @@ func main() {
 		}
 	}
 	fmt.Println("Got shaped hostnames (TSPU).")
-
-	// Прямое скачивание dump.csv
-	csvUrl := "https://svn.code.sf.net/p/zapret-info/code/dump.csv"
-	response, err = get(csvUrl)
-	if err != nil {
-		panic(err)
-	}
-
-	csvIn := bufio.NewReader(response.Body)
-	fmt.Println("Downloaded csv.")
-
-	_, err = csvIn.ReadString('\n')
-	if err != nil {
-		panic(err)
-	}
-
-	reader := csv.NewReader(transform.NewReader(csvIn, charmap.Windows1251.NewDecoder()))
-	reader.Comma = ';'
-	reader.FieldsPerRecord = -1
-	idnaAnalyse := idna.New()
 
 	customHostnames := map[string]bool{
 		// TSPU-extra
@@ -753,12 +729,12 @@ func main() {
 		"soundcompiler.com":                true, // Amazon
 		"segments.mottocdn.com":            true, // blocked in RU
 		"appimage.org":                     true, // Hetzner
-		"songsterr.com":                	true, // Amazon
-		"pocketcasts.com":                	true, // Amazon
-		"jazzgroove.org":                	true, // Amazon
+		"songsterr.com":                    true, // Amazon
+		"pocketcasts.com":                  true, // Amazon
+		"jazzgroove.org":                   true, // Amazon
 		"toperme.com":                      true, // ТСПУ
-		"utorr.cc":                      	true, // ТСПУ
-		"altera.com":          				true, // blocked in RU
+		"utorr.cc":                         true, // ТСПУ
+		"altera.com":                       true, // blocked in RU
 
 		// ECH (CloudFlare) ТСПУ
 		"icy-veins.com": true,
@@ -779,59 +755,7 @@ func main() {
 	ipv4 := make(map[string]bool)
 	ipv4subnets := make(map[string]bool)
 	ipv6 := make(map[string]bool)
-
-	for {
-		record, err := reader.Read()
-		if err != nil {
-			if err == io.EOF {
-				break
-			}
-			panic(err)
-		}
-		ifHasHostname := len(record) > 1
-		hostnamesSlice := strings.Split(record[1], "|")
-		for _, hostname := range hostnamesSlice {
-			hostname = strings.Trim(hostname, " \t")
-			if hostname != "" {
-				hostname, err := idnaAnalyse.ToASCII(hostname)
-				if err != nil {
-					panic(err)
-				}
-				if strings.HasPrefix(hostname, "*.") {
-					hostname = hostname[2:]
-				}
-				if nxdomains[hostname] || isIgnoredHostname(hostname) {
-					continue
-				}
-				if strings.HasPrefix(hostname, "www.") {
-					hostname = hostname[4:]
-				}
-				HOSTNAMES[hostname] = true
-				ifHasHostname = true
-			}
-		}
-		if !ifHasHostname {
-			ips := strings.Split(record[0], "|")
-			for _, ip := range ips {
-				ip = strings.Trim(ip, " \t")
-				ifIpV6 := strings.ContainsAny(ip, ":")
-				if ifIpV6 {
-					ipv6[ip] = true
-					continue
-				}
-				ifSubnet := strings.ContainsAny(ip, "/")
-				if ifSubnet {
-					ipv4subnets[ip] = true
-					continue
-				}
-				ipv4[ip] = true
-			}
-		}
-	}
-	response.Body.Close()
-	response = nil
-	fmt.Println("Parsed csv.")
-	runtime.GC()
+	idnaAnalyse := idna.New()
 
 	// Дополнительный источник хостов (reestr_hostname_resolvable_ip4.txt)
 	//response = getOrDie("https://raw.githubusercontent.com/bol-van/rulist/refs/heads/main/reestr_hostname_resolvable_ip4.txt")
