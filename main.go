@@ -754,7 +754,6 @@ func main() {
 
 	ipv4 := make(map[string]bool)
 	ipv4subnets := make(map[string]bool)
-	ipv6 := make(map[string]bool)
 	idnaAnalyse := idna.New()
 
 	// Дополнительный источник хостов (reestr_hostname_resolvable_ip4.txt)
@@ -905,7 +904,6 @@ func main() {
 	sortedDomains = nil
 
 	ipv4 = nil
-	ipv6 = nil
 	ipv4subnets = nil
 	HOSTNAMES = nil
 	runtime.GC()
